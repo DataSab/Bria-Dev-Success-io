@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import ParticlesBackground from './ParticlesBackground';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -18,18 +19,19 @@ const Hero = () => {
   }, [fullText]);
 
   return (
-    <section id="home-section" className="hero-wrap" style={{
+    <section id="home-section" className="hero-wrap animated-bg" style={{
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
       paddingTop: '120px',
       paddingBottom: '60px',
       position: 'relative',
-      background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
+      overflow: 'hidden'
     }}>
+      <ParticlesBackground />
       {/* Logo en haut à gauche */}
       <img
-        src="images/logo-briadev.png"
+        src="/images/logo-briadev.png"
         alt="BRIA DEV SUCCESS Logo"
         style={{
           position: 'absolute',
@@ -76,33 +78,23 @@ const Hero = () => {
               overflow: 'hidden',
               boxShadow: '0 10px 40px rgba(255,189,57,0.3)',
               border: '3px solid #ffbd39',
-              background: '#ff0000',
-              position: 'relative',
-              zIndex: 100
+              background: 'transparent'
             }}>
               <video
-                id="hero-video"
-                controls
+                key="hero-video"
                 autoPlay
                 loop
                 muted
                 playsInline
-                preload="metadata"
+                poster="/images/photo-style-cartoon-3x.jpeg"
                 style={{
                   width: '100%',
                   height: 'auto',
                   minHeight: '400px',
-                  display: 'block',
-                  backgroundColor: '#000',
-                  position: 'relative',
-                  zIndex: 101
+                  display: 'block'
                 }}
-                onError={(e) => console.error('Erreur vidéo:', e)}
-                onLoadedData={() => console.log('Vidéo chargée!')}
               >
                 <source src="/images/hero-video.mp4" type="video/mp4" />
-                <source src="images/hero-video.mp4" type="video/mp4" />
-                <p style={{color: 'white', padding: '20px'}}>Votre navigateur ne supporte pas la vidéo HTML5.</p>
               </video>
             </div>
 
