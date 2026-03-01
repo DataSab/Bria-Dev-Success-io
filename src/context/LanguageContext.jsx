@@ -12,7 +12,7 @@ const translations = {
 
   // Hero Section
   'hero.title': "Reconversion Professionnelle dans l'IT",
-  'hero.subtitle': 'BRIA DEV SUCCESS',
+  'hero.subtitle': 'BRIA DEV SUCCESS (BDS)',
   'hero.description': 'Ressources, retours d\'expérience et outils pour réussir sa reconversion numérique.',
   'hero.btn.about': 'À Propos',
   'hero.btn.roadmaps': 'Roadmaps IT',

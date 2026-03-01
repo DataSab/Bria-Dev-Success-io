@@ -26,22 +26,8 @@ const Hero = () => {
       justifyContent: 'center',
       position: 'relative',
       overflow: 'hidden',
-      padding: '20px'
+      padding: '100px 20px 60px'
     }}>
-      {/* Background Video */}
-      <div className="video-bg-container">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="/images/photo-style-cartoon-3x.jpeg"
-        >
-          <source src="/images/hero-video.mp4" type="video/mp4" />
-        </video>
-        <div className="video-overlay"></div>
-      </div>
-
       <ParticlesBackground />
 
       {/* Logo Responsif */}
@@ -92,19 +78,49 @@ const Hero = () => {
               fontSize: 'clamp(0.9rem, 3vw, 1.4rem)',
               textShadow: '2px 2px 10px rgba(0,0,0,0.9)',
               maxWidth: '800px',
-              margin: '0 auto 3rem',
+              margin: '0 auto 2rem',
               color: '#fff',
               lineHeight: '1.5'
             }}>
               {t('hero.description')}
             </p>
 
+            {/* Lecteur Vidéo Interactif */}
+            <div className="hero-video-player" style={{
+              maxWidth: '800px',
+              width: '100%',
+              margin: '0 auto 3rem',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: '0 20px 50px rgba(0,0,0,0.6)',
+              border: '3px solid #ffbd39',
+              background: '#000',
+              position: 'relative'
+            }}>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                poster="/images/photo-style-cartoon-3x.jpeg"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                  maxHeight: '70vh'
+                }}
+              >
+                <source src="/images/hero-video.mp4" type="video/mp4" />
+                Votre navigateur ne supporte pas la lecture de vidéos.
+              </video>
+            </div>
+
             <div className="hero-buttons" style={{ 
               display: 'flex', 
               gap: '1.5rem', 
               justifyContent: 'center', 
-              flexWrap: 'wrap',
-              marginTop: '2rem'
+              flexWrap: 'wrap'
             }}>
               <a href="#about-section" className="btn btn-primary" style={{
                 borderRadius: '50px',
