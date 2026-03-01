@@ -1,0 +1,558 @@
+/* ===== RESPONSIVE DESIGN GLOBAL ===== */
+
+/* Mobile First Approach */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ===== BREAKPOINTS ===== */
+/* Mobile: 320px - 768px */
+/* Tablet: 769px - 1024px */
+/* Desktop: 1025px+ */
+
+/* ===== HERO SECTION RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #home-section {
+    height: 100vh !important;
+    padding-bottom: 4vh !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+  }
+  
+  #home-section .container {
+    padding: 0 15px !important;
+  }
+  
+  #home-section h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 20px !important;
+    padding: 0 10px !important;
+  }
+  
+  #home-section .subheading {
+    font-size: 1rem !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  #home-section p.lead {
+    font-size: 1rem !important;
+    padding: 0 15px !important;
+    margin-bottom: 30px !important;
+    line-height: 1.4 !important;
+  }
+  
+  .hero-buttons {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: center !important;
+  }
+  
+  .hero-buttons a {
+    width: 100% !important;
+    max-width: 250px !important;
+    margin: 0 !important;
+    padding: 12px 20px !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #home-section h1 {
+    font-size: 3.5rem !important;
+  }
+  
+  #home-section .subheading {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* ===== ABOUT SECTION RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #about-section {
+    padding: 60px 0 !important;
+  }
+  
+  #about-section .container {
+    padding: 0 15px !important;
+  }
+  
+  #about-section h2 {
+    font-size: 1.8rem !important;
+    margin-bottom: 20px !important;
+    padding: 0 10px !important;
+    text-align: center !important;
+  }
+  
+  #about-section p {
+    font-size: 0.95rem !important;
+    text-align: center !important;
+    padding: 0 10px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 15px !important;
+  }
+  
+  #about-section .col-md-6 {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* ===== CAREER PATHS RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #career-paths-section {
+    padding: 60px 0 !important;
+  }
+  
+  #career-paths-section .container {
+    padding: 0 10px !important;
+  }
+  
+  #career-paths-section h2 {
+    font-size: 1.8rem !important;
+    margin-bottom: 15px !important;
+    padding: 0 10px !important;
+  }
+  
+  #career-paths-section .col-md-10 p {
+    font-size: 0.95rem !important;
+    padding: 0 10px !important;
+    margin-bottom: 25px !important;
+  }
+  
+  /* Career tabs mobile */
+  #career-paths-section .d-flex {
+    flex-direction: column !important;
+    gap: 8px !important;
+    padding: 0 15px !important;
+  }
+  
+  #career-paths-section .d-flex button {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 12px 16px !important;
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+  }
+  
+  /* Main career card mobile */
+  #career-paths-section .col-md-10 > div {
+    margin: 0 10px !important;
+    padding: 20px 15px !important;
+    border-radius: 15px !important;
+    min-height: 400px !important;
+  }
+  
+  /* Header section mobile */
+  #career-paths-section .row.mb-4 {
+    flex-direction: column !important;
+    margin-bottom: 20px !important;
+  }
+  
+  #career-paths-section .col-md-8,
+  #career-paths-section .col-md-4 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin-bottom: 15px !important;
+  }
+  
+  /* Icon and title mobile */
+  #career-paths-section .col-md-8 > div {
+    flex-direction: column !important;
+    text-align: center !important;
+    margin-bottom: 10px !important;
+  }
+  
+  #career-paths-section .col-md-8 > div > div:first-child {
+    margin-right: 0 !important;
+    margin-bottom: 15px !important;
+    width: 55px !important;
+    height: 55px !important;
+    font-size: 1.6rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  #career-paths-section .col-md-8 h3 {
+    font-size: 1.5rem !important;
+    margin-bottom: 8px !important;
+  }
+  
+  #career-paths-section .col-md-8 p {
+    font-size: 0.9rem !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
+  }
+  
+  /* Duration/Salary stats mobile */
+  #career-paths-section .col-md-4 .row {
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+  
+  #career-paths-section .col-md-4 .col-6 {
+    width: 45% !important;
+    max-width: 120px !important;
+  }
+  
+  #career-paths-section .col-md-4 .col-6 > div {
+    padding: 12px 8px !important;
+    border-radius: 10px !important;
+  }
+  
+  #career-paths-section .col-md-4 .col-6 > div > div:first-child {
+    font-size: 1.2rem !important;
+  }
+  
+  #career-paths-section .col-md-4 .col-6 > div > div:last-child {
+    font-size: 0.75rem !important;
+  }
+  
+  /* Skills and steps mobile */
+  #career-paths-section .row:last-child {
+    flex-direction: column !important;
+  }
+  
+  #career-paths-section .row:last-child .col-md-6 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 20px !important;
+    padding: 0 !important;
+  }
+  
+  #career-paths-section .row:last-child h4 {
+    font-size: 1.1rem !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+  }
+  
+  /* Skills badges mobile */
+  #career-paths-section .col-md-6:first-child > div {
+    justify-content: center !important;
+    gap: 6px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  #career-paths-section .col-md-6:first-child span {
+    padding: 5px 12px !important;
+    font-size: 0.75rem !important;
+    border-radius: 15px !important;
+  }
+  
+  /* Steps mobile */
+  #career-paths-section .col-md-6:last-child > div > div {
+    align-items: flex-start !important;
+    margin-bottom: 10px !important;
+  }
+  
+  #career-paths-section .col-md-6:last-child > div > div > div:first-child {
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 10px !important;
+    font-size: 0.7rem !important;
+    margin-top: 2px !important;
+  }
+  
+  #career-paths-section .col-md-6:last-child span {
+    font-size: 0.85rem !important;
+    line-height: 1.3 !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #career-paths-section h2 {
+    font-size: 2rem !important;
+  }
+  
+  #career-paths-section .d-flex button {
+    padding: 8px 16px !important;
+    font-size: 0.9rem !important;
+  }
+  
+  #career-paths-section .col-md-10 > div {
+    padding: 25px 20px !important;
+    min-height: 480px !important;
+  }
+}
+
+/* ===== BLOG SECTION RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #projects-section {
+    padding: 60px 0 80px !important;
+  }
+  
+  #projects-section h2 {
+    font-size: 2rem !important;
+  }
+  
+  /* Blog grid responsive */
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 15px !important;
+  }
+  
+  .blog-card {
+    padding: 20px !important;
+  }
+  
+  .blog-card img {
+    height: 180px !important;
+  }
+  
+  .blog-card h3 {
+    font-size: 1rem !important;
+    min-height: auto !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ===== CONTACT SECTION RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #contact-section {
+    padding: 80px 0 100px !important;
+  }
+  
+  #contact-section h2 {
+    font-size: 2rem !important;
+    margin-bottom: 30px !important;
+  }
+  
+  .contact-inner {
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+  
+  .contact-inner .icon {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 24px !important;
+    margin: 0 auto 30px auto !important;
+  }
+}
+
+/* ===== NAVBAR RESPONSIVE ===== */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center !important;
+    padding: 20px 0 !important;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 12px 20px !important;
+    margin: 4px 0 !important;
+    border-radius: 8px !important;
+  }
+  
+  .navbar-brand img {
+    max-height: 50px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #ftco-navbar {
+    padding: 15px 0 !important;
+    min-height: 70px !important;
+  }
+  
+  .navbar-brand img {
+    max-height: 45px !important;
+  }
+  
+  #ftco-navbar .navbar-toggler {
+    padding: 8px 15px !important;
+    top: 15px !important; /* Move it down */
+  }
+}
+
+/* ===== TECH STACK RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #bases-section {
+    padding: 60px 0 !important;
+  }
+  
+  #bases-section .container {
+    padding: 0 15px !important;
+  }
+  
+  #bases-section h2 {
+    font-size: 1.8rem !important;
+    margin-bottom: 20px !important;
+    padding: 0 10px !important;
+  }
+  
+  #bases-section .tech-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+    padding: 0 10px !important;
+  }
+  
+  #bases-section .tech-item {
+    padding: 12px 8px !important;
+    font-size: 0.75rem !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+  }
+  
+  #bases-section .tech-item img {
+    width: 24px !important;
+    height: 24px !important;
+    margin-bottom: 5px !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #bases-section .tech-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 12px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #bases-section .tech-grid {
+    grid-template-columns: repeat(6, 1fr) !important;
+  }
+}
+
+/* ===== ROADMAPS RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #skills-section {
+    padding: 60px 0 !important;
+  }
+  
+  #skills-section .container {
+    padding: 0 15px !important;
+  }
+  
+  #skills-section h2 {
+    font-size: 1.8rem !important;
+    margin-bottom: 20px !important;
+    padding: 0 10px !important;
+  }
+  
+  #skills-section p {
+    font-size: 0.95rem !important;
+    padding: 0 10px !important;
+    margin-bottom: 25px !important;
+  }
+  
+  /* Roadmap tabs mobile */
+  #skills-section .d-flex {
+    flex-direction: column !important;
+    gap: 8px !important;
+    padding: 0 15px !important;
+  }
+  
+  #skills-section .d-flex button {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 12px 16px !important;
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+  }
+  
+  /* Roadmap content mobile */
+  #skills-section .roadmap-content {
+    padding: 20px 15px !important;
+    margin: 0 10px !important;
+    border-radius: 15px !important;
+  }
+  
+  #skills-section .roadmap-step {
+    padding: 12px !important;
+    margin-bottom: 12px !important;
+    border-radius: 8px !important;
+    font-size: 0.85rem !important;
+  }
+  
+  #skills-section .roadmap-step h4 {
+    font-size: 1rem !important;
+    margin-bottom: 5px !important;
+  }
+  
+  #skills-section .roadmap-step p {
+    font-size: 0.8rem !important;
+    margin-bottom: 0 !important;
+    line-height: 1.3 !important;
+    padding: 0 !important;
+  }
+}
+
+/* ===== FOOTER RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .ftco-footer {
+    padding: 40px 0 !important;
+  }
+  
+  .ftco-footer p {
+    font-size: 0.9rem !important;
+    text-align: center !important;
+  }
+}
+
+/* ===== UTILITIES ===== */
+.container-responsive {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .container-responsive {
+    padding: 0 15px;
+  }
+}
+
+.text-responsive {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+}
+
+.heading-responsive {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1.2;
+}
+
+/* ===== SCROLL BEHAVIOR ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .navbar,
+  .hero-buttons,
+  .contact-inner .icon,
+  .contact-inner a {
+    display: none !important;
+  }
+  
+  * {
+    color: #000 !important;
+    background: #fff !important;
+  }
+}

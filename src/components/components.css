@@ -1,0 +1,166 @@
+/* ========================================
+   STYLES POUR LES COMPOSANTS REACT
+   ======================================== */
+
+/* Hero Section */
+.hero-wrap {
+  min-height: 100vh;
+}
+
+.hero-wrap .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-wrap .blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Navbar */
+.navbar-brand img {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.nav-link {
+  transition: all 0.3s ease;
+}
+
+/* Menu mobile avec fond visible */
+@media (max-width: 991px) {
+  .navbar-collapse.show {
+    background: #ffbd39 !important;
+    padding: 20px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    margin-top: 10px;
+  }
+
+  .navbar-collapse.show .navbar-nav {
+    background: transparent;
+  }
+
+  .navbar-collapse.show .nav-item {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 5px 0;
+  }
+
+  .navbar-collapse.show .nav-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* About Section */
+.profile-img-container img {
+  transition: transform 0.3s ease;
+}
+
+.profile-img-container img:hover {
+  transform: scale(1.05);
+}
+
+/* TechStack Section */
+.skill-badge {
+  transition: all 0.3s ease;
+}
+
+.category-box {
+  transition: transform 0.3s ease;
+}
+
+.category-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Roadmaps Section */
+.card-modern {
+  transition: all 0.3s ease;
+}
+
+.card-modern:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.roadmap-tabs .btn {
+  transition: all 0.3s ease;
+}
+
+/* Projects Section */
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card .img-container img {
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .img-container img {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-section .box {
+  transition: all 0.3s ease;
+}
+
+.contact-section .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-wrap h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-wrap .subheading {
+    font-size: 1.2rem !important;
+  }
+
+  .hero-wrap .lead {
+    font-size: 1rem !important;
+  }
+
+  .about-content {
+    text-align: left !important;
+  }
+
+  .roadmap-tabs {
+    flex-direction: column;
+  }
+
+  .roadmap-tabs .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-wrap h1 {
+    font-size: 2rem !important;
+  }
+
+  .profile-img-container img {
+    max-width: 180px !important;
+  }
+
+  section {
+    padding: 60px 0 40px !important;
+  }
+}

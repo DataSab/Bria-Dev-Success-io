@@ -1,0 +1,150 @@
+# ========================================
+# FICHIERS SYSTÈME
+# ========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ========================================
+# LOGS
+# ========================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+server.log
+
+# ========================================
+# SASS / CSS CACHE ET SOURCES
+# ========================================
+.sass-cache/
+*.css.map
+scss/
+
+# ========================================
+# IDE / ÉDITEURS
+# ========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ========================================
+# NODE MODULES
+# ========================================
+node_modules/
+package-lock.json
+yarn.lock
+
+# ========================================
+# BUILD / DIST
+# ========================================
+dist/
+build/
+
+# ========================================
+# FICHIERS PERSONNELS ET DOCUMENTATION PRIVÉE
+# ========================================
+Docs/
+GUIDE-APPRENTISSAGE.md
+RESUME-RAPIDE.md
+
+# ========================================
+# FICHIERS DE CONFIGURATION PERSONNELS
+# ========================================
+prepros-6.config
+prepros.config
+
+# ========================================
+# FICHIERS DE DÉMO ET TEST
+# ========================================
+demo-*.html
+*-demo.html
+test-*.html
+*-test.html
+
+# ========================================
+# SCRIPTS PERSONNELS
+# ========================================
+*.py
+*.sh
+
+# ========================================
+# FICHIERS DE BACKUP
+# ========================================
+*.backup
+*.backup-*
+*.bak
+*.old
+*.orig
+
+# ========================================
+# FICHIERS SENSIBLES (CLÉS, SECRETS, etc.)
+# ========================================
+.env
+.env.*
+*.pem
+*.key
+*secret*
+*password*
+credentials.json
+config.local.json
+
+# ========================================
+# AUTRES FICHIERS À EXCLURE
+# ========================================
+# Fichiers temporaires
+*.tmp
+*.temp
+~*
+
+# Fichiers de vérification Google (si vous en avez)
+google*.html
+
+# ========================================
+# ANCIENS FICHIERS DE L'ANCIEN SITE STATIQUE (À CACHER)
+# ========================================
+# Anciens dossiers CSS/JS/Images (remplacés par src/ et public/)
+css/
+js/
+images/
+fonts/
+
+# Fichiers de build et configuration anciens
+favicon.png
+
+# ========================================
+# FICHIERS DE DOCUMENTATION TECHNIQUE (À CACHER)
+# ========================================
+DEPLOYMENT_OVH.md
+MIGRATION_GUIDE.md
+deploy.md
+
+# ========================================
+# FICHIERS DE CACHE ET BUILD TEMPORAIRES
+# ========================================
+.sass-cache/
+.vite/
+dist/
+
+# ========================================
+# FLUTTER / DART / MOBILE (NON UTILISÉ - PROJET WEB UNIQUEMENT)
+# ========================================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+android/
+ios/
+
+# ========================================
+# DOSSIERS DE BACKUP
+# ========================================
+Bria-Dev.io-backup/

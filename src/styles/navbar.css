@@ -1,0 +1,180 @@
+/* Navbar Base Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  margin: 0;
+  padding: 8px 0;
+  background: rgba(0, 0, 0, 0.7) !important; /* Transparence ajoutée */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 189, 57, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-scrolled {
+  padding: 2px 0;
+  background: #000000 !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+  border-bottom: 2px solid #ffbd39;
+}
+
+.container-navbar {
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrage des boutons */
+}
+
+/* Brand/Logo */
+.navbar-brand {
+  display: none; /* Logo déplacé dans le Hero, donc caché ici au cas où */
+}
+
+/* Navigation Links */
+.navbar-collapse {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px; /* Un peu plus d'espace pour la clarté */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  padding: 8px 12px !important;
+  color: #ffbd39 !important; /* Jaune forcé */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  border-radius: 4px !important;
+  white-space: nowrap;
+  background: transparent !important;
+}
+
+/* Forcer le jaune même si Bootstrap essaie de mettre du blanc */
+.navbar-nav .nav-link,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active {
+  color: #ffbd39 !important;
+}
+
+.nav-link:hover {
+  color: #000000 !important;
+  background-color: #ffbd39 !important;
+  transform: translateY(-2px);
+}
+
+/* Mobile Toggler */
+#ftco-navbar .navbar-toggler {
+  display: none !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 8px 15px !important;
+  background: rgba(255, 189, 57, 0.1) !important;
+  border: 2px solid #ffbd39 !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  position: absolute !important;
+  right: 15px !important;
+  top: 15px !important; /* Positioned further down as requested */
+  width: auto !important;
+  height: auto !important;
+  color: #ffbd39 !important;
+}
+
+#ftco-navbar .navbar-toggler:hover, 
+#ftco-navbar .navbar-toggler:active {
+  background: rgba(255, 189, 57, 0.2) !important;
+  transform: translateY(1px) !important;
+}
+
+#ftco-navbar .toggler-icons-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+#ftco-navbar .toggler-icon {
+  width: 18px !important;
+  height: 2px !important;
+  background: #ffbd39 !important;
+  border-radius: 2px !important;
+  transition: all 0.3s ease !important;
+}
+
+#ftco-navbar .toggler-text {
+  color: #ffbd39 !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  display: inline-block !important;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  #ftco-navbar {
+    padding: 15px 0 !important;
+    min-height: 70px !important; /* Increased height */
+  }
+
+  #ftco-navbar .navbar-toggler {
+    display: flex !important;
+  }
+}
+
+  .navbar-collapse {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #0a0a0a;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .navbar-collapse.show {
+    display: flex;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 10px !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-margin-top: 80px;
+}
