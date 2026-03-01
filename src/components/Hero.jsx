@@ -29,20 +29,25 @@ const Hero = () => {
       position: 'relative'
     }}>
       <div className="overlay" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)' }}></div>
+
+      {/* Logo en haut à gauche */}
+      <img
+        src="images/logo-briadev.png"
+        alt="BRIA DEV SUCCESS Logo"
+        style={{
+          position: 'absolute',
+          top: '20px',
+          left: '20px',
+          maxHeight: '120px',
+          zIndex: 10,
+          filter: 'drop-shadow(0 4px 15px rgba(255,189,57,0.4))'
+        }}
+      />
+
       <div className="container" style={{ position: 'relative', zIndex: 2, marginBottom: '5vh' }}>
         <div className="row slider-text align-items-center justify-content-center">
           <div className="col-md-10 text-center">
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '1rem' }}>
-              <span className="subheading" style={{ color: '#ffbd39', fontSize: '1.8rem', fontWeight: '800', letterSpacing: '5px', textShadow: '2px 2px 10px rgba(0,0,0,0.8)' }}>{t('hero.subtitle')}</span>
-              <img
-                src="images/logo-briadev.png"
-                alt="BRIA DEV SUCCESS Logo"
-                style={{
-                  maxHeight: '120px',
-                  filter: 'drop-shadow(0 4px 15px rgba(255,189,57,0.4))'
-                }}
-              />
-            </div>
+            <span className="subheading" style={{ color: '#ffbd39', fontSize: '1.8rem', fontWeight: '800', letterSpacing: '5px', textShadow: '2px 2px 10px rgba(0,0,0,0.8)', display: 'block', marginBottom: '1rem' }}>{t('hero.subtitle')}</span>
             <h1 className="mb-4 mt-3 mx-auto" style={{ 
               color: '#fff', 
               fontSize: '4.5rem', 
