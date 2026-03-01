@@ -6,7 +6,7 @@
 
 🌐 **Site web dédié aux personnes en reconversion professionnelle dans le digital**
 
-## 🇫🇷 Présentation
+## Présentation
 
 **BRIA DEV SUCCESS (BDS)** est une plateforme web évolutive pensée pour accompagner les personnes en reconversion professionnelle vers les métiers du numérique.
 
