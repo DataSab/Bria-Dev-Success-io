@@ -34,13 +34,13 @@ const Hero = () => {
           <div className="col-md-10 text-center">
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '1rem' }}>
               <span className="subheading" style={{ color: '#ffbd39', fontSize: '1.8rem', fontWeight: '800', letterSpacing: '5px', textShadow: '2px 2px 10px rgba(0,0,0,0.8)' }}>{t('hero.subtitle')}</span>
-              <img 
-                src="images/logo-briadev.png" 
-                alt="BRIA DEV SUCCESS Logo" 
-                style={{ 
-                  maxHeight: '60px', 
-                  filter: 'drop-shadow(0 4px 15px rgba(255,189,57,0.4))' 
-                }} 
+              <img
+                src="images/logo-briadev.png"
+                alt="BRIA DEV SUCCESS Logo"
+                style={{
+                  maxHeight: '120px',
+                  filter: 'drop-shadow(0 4px 15px rgba(255,189,57,0.4))'
+                }}
               />
             </div>
             <h1 className="mb-4 mt-3 mx-auto" style={{ 
