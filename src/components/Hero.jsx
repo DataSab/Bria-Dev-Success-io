@@ -45,7 +45,7 @@ const Hero = () => {
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="row align-items-center justify-content-center">
           {/* Colonne Texte */}
-          <div className="col-lg-6 text-center text-lg-left mb-3 mb-lg-0">
+          <div className="col-lg-6 text-center mb-3 mb-lg-0">
             <span className="subheading" style={{ 
               color: '#ffbd39', 
               fontSize: 'clamp(0.8rem, 3.5vw, 1.2rem)', 
@@ -53,7 +53,8 @@ const Hero = () => {
               letterSpacing: '2px', 
               display: 'block', 
               marginBottom: '0.5rem',
-              textShadow: '2px 2px 10px rgba(0,0,0,0.8)'
+              textShadow: '2px 2px 10px rgba(0,0,0,0.8)',
+              textAlign: 'center'
             }}>{t('hero.subtitle')}</span>
 
             <h1 className="mb-2" style={{
@@ -61,7 +62,8 @@ const Hero = () => {
               fontSize: 'clamp(1.2rem, 6vw, 2.8rem)',
               fontWeight: '900',
               textShadow: '0 0 20px rgba(0,0,0,0.8)',
-              lineHeight: '1.1'
+              lineHeight: '1.1',
+              textAlign: 'center'
             }}>
               {text}
             </h1>
@@ -73,7 +75,8 @@ const Hero = () => {
               marginBottom: '1rem',
               lineHeight: '1.3',
               borderLeft: 'none',
-              padding: '0'
+              padding: '0',
+              textAlign: 'center'
             }}>
               {t('hero.quote')}
             </blockquote>
@@ -83,7 +86,8 @@ const Hero = () => {
               lineHeight: '1.4',
               opacity: 0.9,
               maxWidth: '600px',
-              margin: '0 auto 1rem auto'
+              margin: '0 auto 1rem auto',
+              textAlign: 'center'
             }}>
               {t('hero.welcome')}
             </p>
