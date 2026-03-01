@@ -68,10 +68,10 @@ const Hero = () => {
               letterSpacing: '3px', 
               textShadow: '2px 2px 10px rgba(0,0,0,0.8)', 
               display: 'block', 
-              marginBottom: '0.5rem' 
+              marginBottom: '0.2rem' 
             }}>{t('hero.subtitle')}</span>
             
-            <h1 className="mb-4 mt-3 mx-auto" style={{
+            <h1 className="mb-3 mt-3 mx-auto" style={{
               color: '#fff',
               fontSize: 'clamp(2rem, 8vw, 4.5rem)',
               fontWeight: '900',
@@ -83,11 +83,11 @@ const Hero = () => {
               {text}
             </h1>
 
-            <p className="lead text-white font-weight-bold mb-5 mx-auto" style={{
+            <p className="lead text-white font-weight-bold mb-4 mx-auto" style={{
               fontSize: 'clamp(0.9rem, 3vw, 1.4rem)',
               textShadow: '2px 2px 10px rgba(0,0,0,0.9)',
               maxWidth: '800px',
-              margin: '0 auto 2rem',
+              margin: '0 auto 1.5rem',
               color: '#fff',
               lineHeight: '1.5'
             }}>
@@ -98,14 +98,14 @@ const Hero = () => {
             <div className="hero-video-player" style={{
               maxWidth: '800px',
               width: '100%',
-              margin: '0 auto 3rem',
+              margin: '0 auto 1.5rem',
               borderRadius: '20px',
               overflow: 'hidden',
               boxShadow: '0 20px 50px rgba(0,0,0,0.6)',
               border: '3px solid #ffbd39',
               background: '#000',
               position: 'relative',
-              zIndex: 20, /* Priorité absolue sur le clic */
+              zIndex: 100, /* Priorité MAXIMALE sur le clic */
               cursor: 'pointer'
             }}>
               <video
@@ -120,7 +120,7 @@ const Hero = () => {
                   width: '100%',
                   height: 'auto',
                   display: 'block',
-                  maxHeight: '70vh'
+                  maxHeight: '60vh'
                 }}
               >
                 <source src="/images/hero-video.mp4" type="video/mp4" />
@@ -130,9 +130,10 @@ const Hero = () => {
 
             <div className="hero-buttons" style={{ 
               display: 'flex', 
-              gap: '1.5rem', 
+              gap: '1rem', 
               justifyContent: 'center', 
-              flexWrap: 'wrap'
+              flexWrap: 'wrap',
+              marginTop: '1rem'
             }}>
               <a href="#about-section" className="btn btn-primary" style={{
                 borderRadius: '50px',
