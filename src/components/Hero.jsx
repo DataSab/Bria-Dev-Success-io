@@ -83,11 +83,11 @@ const Hero = () => {
               {text}
             </h1>
 
-            <p className="lead text-white font-weight-bold mb-4 mx-auto" style={{
+            <p className="lead text-white font-weight-bold mb-3 mx-auto" style={{
               fontSize: 'clamp(0.9rem, 3vw, 1.4rem)',
               textShadow: '2px 2px 10px rgba(0,0,0,0.9)',
               maxWidth: '800px',
-              margin: '0 auto 1.5rem',
+              margin: '0 auto 1rem',
               color: '#fff',
               lineHeight: '1.5'
             }}>
@@ -96,9 +96,9 @@ const Hero = () => {
 
             {/* Lecteur Vidéo Interactif */}
             <div className="hero-video-player" style={{
-              maxWidth: '800px',
+              maxWidth: '750px',
               width: '100%',
-              margin: '0 auto 1.5rem',
+              margin: '0 auto 1rem',
               borderRadius: '20px',
               overflow: 'hidden',
               boxShadow: '0 20px 50px rgba(0,0,0,0.6)',
@@ -120,10 +120,10 @@ const Hero = () => {
                   width: '100%',
                   height: 'auto',
                   display: 'block',
-                  maxHeight: '60vh'
+                  maxHeight: '55vh'
                 }}
               >
-                <source src="/images/hero-video.mp4" type="video/mp4" />
+                <source src="/hero-video.mp4" type="video/mp4" />
                 Votre navigateur ne supporte pas la lecture de vidéos.
               </video>
             </div>
@@ -133,7 +133,7 @@ const Hero = () => {
               gap: '1rem', 
               justifyContent: 'center', 
               flexWrap: 'wrap',
-              marginTop: '1rem'
+              marginTop: '0.5rem'
             }}>
               <a href="#about-section" className="btn btn-primary" style={{
                 borderRadius: '50px',
