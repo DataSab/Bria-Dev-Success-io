@@ -36,12 +36,13 @@ const Hero = () => {
         alt="BRIA DEV SUCCESS Logo"
         style={{
           position: 'absolute',
-          top: '20px',
-          left: '20px',
-          maxHeight: '120px',
+          top: '100px',
+          left: '30px',
+          maxHeight: '70px',
           zIndex: 10,
           filter: 'drop-shadow(0 4px 15px rgba(255,189,57,0.4))'
         }}
+        className="hero-logo"
       />
 
       <div className="container" style={{ position: 'relative', zIndex: 2, marginBottom: '5vh' }}>

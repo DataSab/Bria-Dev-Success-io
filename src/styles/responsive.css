@@ -16,6 +16,27 @@ html, body {
 /* Desktop: 1025px+ */
 
 /* ===== HERO SECTION RESPONSIVE ===== */
+/* Logo Hero responsive */
+.hero-logo {
+  max-height: 70px !important;
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    max-height: 50px !important;
+    top: 80px !important;
+    left: 15px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-logo {
+    max-height: 60px !important;
+    top: 90px !important;
+    left: 25px !important;
+  }
+}
+
 @media (max-width: 768px) {
   #home-section {
     height: 100vh !important;
@@ -23,7 +44,7 @@ html, body {
     background-position: center center !important;
     background-attachment: scroll !important;
   }
-  
+
   #home-section .container {
     padding: 0 15px !important;
   }
