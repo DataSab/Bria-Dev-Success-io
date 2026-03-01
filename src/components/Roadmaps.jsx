@@ -1,7 +1,86 @@
 import React, { useState } from 'react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
+
+const RoadmapCard = ({ item, index }) => {
+  const [revealRef, revealStyle] = useScrollReveal({ delay: index * 0.1 });
+  return (
+    <div 
+      ref={revealRef} 
+      style={revealStyle} 
+      className="col-md-6 col-lg-5 mb-5 d-flex justify-content-center"
+    >
+      <div className="card-modern shadow-lg border-0 h-100 w-100" style={{ 
+        padding: '2.5rem', borderRadius: '30px', background: '#fff', borderLeft: `8px solid ${item.color}`,
+        maxWidth: '520px',
+        transition: 'transform 0.3s ease'
+      }}
+      onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
+      onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+      >
+        <div className="d-flex align-items-center mb-4">
+          <div style={{ 
+            background: item.color, color: '#fff', width: '45px', height: '45px', borderRadius: '50%', 
+            display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '900', marginRight: '1.2rem',
+            boxShadow: `0 4px 10px ${item.color}40`
+          }}>
+            {item.id}
+          </div>
+          <h3 className="h5 font-weight-bold mb-0" style={{ fontWeight: '900', fontSize: '1.2rem' }}>{item.title}</h3>
+        </div>
+        <p className="text-muted mb-4" style={{ fontSize: '1rem', lineHeight: '1.6' }}>{item.description}</p>
+        <div className="advice-badge p-3 px-4" style={{ background: '#f8f9fa', borderRadius: '15px', border: '1px dashed #ccc' }}>
+           <span className="small font-weight-bold" style={{ color: item.color, fontSize: '0.9rem' }}>{item.advice}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ConseilCard = ({ conseil, index }) => {
+  const [revealRef, revealStyle] = useScrollReveal({ delay: index * 0.1 });
+  return (
+    <div ref={revealRef} style={revealStyle} className="col-lg-2 col-md-5 mb-5 d-flex">
+      <div className="conseil-card p-4 shadow-lg w-100" style={{ 
+        background: '#fff', 
+        borderRadius: '35px', 
+        borderBottom: '8px solid #ffbd39',
+        transition: 'all 0.3s ease',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        minHeight: '320px',
+        textAlign: 'left'
+      }}
+      onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-15px)'}
+      onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+      >
+        <div className="icon-wrap mb-4" style={{ 
+          fontSize: '40px', 
+          color: '#ffbd39',
+          background: 'rgba(255, 189, 57, 0.12)',
+          width: '85px',
+          height: '85px',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          margin: '0 0 20px 0',
+          boxShadow: '0 5px 15px rgba(255,189,57,0.2)'
+        }}>
+          <span className={conseil.icon}></span>
+        </div>
+        <h4 className="h5 font-weight-bold mb-3" style={{ color: '#000', fontWeight: '900', fontSize: '1.2rem', textAlign: 'left' }}>{conseil.title}</h4>
+        <div className="text-muted mb-0" style={{ fontSize: '0.95rem', lineHeight: '1.6', fontWeight: '600', textAlign: 'left' }}>
+          {conseil.desc}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Roadmaps = () => {
   const [activeTab, setActiveTab] = useState('dev');
+  const [headerRef, headerStyle] = useScrollReveal();
 
   const roadmapData = {
     dev: [
@@ -37,7 +116,7 @@ const Roadmaps = () => {
       scrollMarginTop: '100px'
     }}>
       <div className="container">
-        <div className="row justify-content-center pb-5">
+        <div ref={headerRef} style={headerStyle} className="row justify-content-center pb-5">
           <div className="col-md-12 heading-section text-center">
             <h2 className="mb-4" style={{ fontWeight: '900', color: '#000', letterSpacing: '1px' }}>ROADMAPS PAR MÉTIER IT</h2>
             <p className="text-muted font-weight-bold mb-5">Choisissez votre domaine et découvrez le parcours étape par étape pour réussir votre reconversion.</p>
@@ -77,31 +156,7 @@ const Roadmaps = () => {
 
         <div className="row mt-5 mb-5 justify-content-center" style={{ gap: '10px' }}>
           {roadmapData[activeTab].map((item, index) => (
-            <div key={index} className="col-md-6 col-lg-5 mb-5 d-flex justify-content-center">
-              <div className="card-modern shadow-lg border-0 h-100 w-100" style={{ 
-                padding: '2.5rem', borderRadius: '30px', background: '#fff', borderLeft: `8px solid ${item.color}`,
-                maxWidth: '520px',
-                transition: 'transform 0.3s ease'
-              }}
-              onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
-              onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
-              >
-                <div className="d-flex align-items-center mb-4">
-                  <div style={{ 
-                    background: item.color, color: '#fff', width: '45px', height: '45px', borderRadius: '50%', 
-                    display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '900', marginRight: '1.2rem',
-                    boxShadow: `0 4px 10px ${item.color}40`
-                  }}>
-                    {item.id}
-                  </div>
-                  <h3 className="h5 font-weight-bold mb-0" style={{ fontWeight: '900', fontSize: '1.2rem' }}>{item.title}</h3>
-                </div>
-                <p className="text-muted mb-4" style={{ fontSize: '1rem', lineHeight: '1.6' }}>{item.description}</p>
-                <div className="advice-badge p-3 px-4" style={{ background: '#f8f9fa', borderRadius: '15px', border: '1px dashed #ccc' }}>
-                   <span className="small font-weight-bold" style={{ color: item.color, fontSize: '0.9rem' }}>{item.advice}</span>
-                </div>
-              </div>
-            </div>
+            <RoadmapCard key={`${activeTab}-${index}`} item={item} index={index} />
           ))}
         </div>
 
@@ -125,42 +180,7 @@ const Roadmaps = () => {
           </div>
           <div className="row justify-content-center" style={{ gap: '30px', width: '100%', padding: '0 20px' }}>
             {conseils.map((conseil, index) => (
-              <div key={index} className="col-lg-2 col-md-5 mb-5 d-flex">
-                <div className="conseil-card p-4 shadow-lg w-100" style={{ 
-                  background: '#fff', 
-                  borderRadius: '35px', 
-                  borderBottom: '8px solid #ffbd39',
-                  transition: 'all 0.3s ease',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  minHeight: '320px',
-                  textAlign: 'left' // Alignement global à gauche
-                }}
-                onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-15px)'}
-                onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
-                >
-                  <div className="icon-wrap mb-4" style={{ 
-                    fontSize: '40px', 
-                    color: '#ffbd39',
-                    background: 'rgba(255, 189, 57, 0.12)',
-                    width: '85px',
-                    height: '85px',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 0 20px 0', // Icône alignée à gauche avec marge
-                    boxShadow: '0 5px 15px rgba(255,189,57,0.2)'
-                  }}>
-                    <span className={conseil.icon}></span>
-                  </div>
-                  <h4 className="h5 font-weight-bold mb-3" style={{ color: '#000', fontWeight: '900', fontSize: '1.2rem', textAlign: 'left' }}>{conseil.title}</h4>
-                  <div className="text-muted mb-0" style={{ fontSize: '0.95rem', lineHeight: '1.6', fontWeight: '600', textAlign: 'left' }}>
-                    {conseil.desc}
-                  </div>
-                </div>
-              </div>
+              <ConseilCard key={index} conseil={conseil} index={index} />
             ))}
           </div>
         </div>

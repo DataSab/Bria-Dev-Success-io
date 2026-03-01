@@ -1,5 +1,72 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { useScrollReveal } from '../hooks/useScrollReveal';
+
+const FeatureCard = ({ feat, idx }) => {
+  const [revealRef, revealStyle] = useScrollReveal({ delay: idx * 0.1 });
+  return (
+    <div 
+      ref={revealRef}
+      style={{
+        ...revealStyle,
+        height: '100%'
+      }}
+      className="col-md-4 col-sm-6 mb-4"
+    >
+      <div 
+        onClick={feat.onClick}
+        style={{
+          background: '#f8f9fa',
+          padding: window.innerWidth < 768 ? '20px' : '30px',
+          borderRadius: '20px',
+          borderBottom: '5px solid #ffbd39',
+          height: '100%',
+          textAlign: 'center',
+          transition: 'all 0.3s ease',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+          cursor: 'pointer'
+        }}
+        onMouseOver={(e) => {
+          e.currentTarget.style.transform = 'translateY(-10px)';
+          e.currentTarget.style.background = '#fff';
+          e.currentTarget.style.boxShadow = '0 15px 40px rgba(255, 189, 57, 0.15)';
+        }}
+        onMouseOut={(e) => {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.background = '#f8f9fa';
+          e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
+        }}
+      >
+        <div style={{ fontSize: window.innerWidth < 768 ? '2rem' : '2.5rem', marginBottom: '10px' }}>{feat.icon}</div>
+        <h3 style={{ 
+          color: '#000', 
+          fontWeight: '800', 
+          fontSize: window.innerWidth < 768 ? '1.1rem' : '1.2rem',
+          marginBottom: '8px'
+        }}>
+          {feat.title}
+        </h3>
+        <p style={{ 
+          color: '#666', 
+          fontSize: window.innerWidth < 768 ? '0.85rem' : '0.95rem',
+          lineHeight: '1.5',
+          margin: 0
+        }}>
+          {feat.desc}
+        </p>
+        <div style={{ 
+          marginTop: '15px', 
+          color: '#ffbd39', 
+          fontSize: '0.8rem', 
+          fontWeight: '700',
+          textTransform: 'uppercase'
+        }}>
+          En savoir plus +
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Features = () => {
   const { t } = useLanguage();
@@ -39,59 +106,7 @@ const Features = () => {
       <div className="container">
         <div className="row justify-content-center">
           {features.map((feat, idx) => (
-            <div key={idx} className="col-md-4 col-sm-6 mb-4">
-              <div 
-                onClick={() => setActiveFeature(feat)}
-                style={{
-                  background: '#f8f9fa',
-                  padding: window.innerWidth < 768 ? '20px' : '30px',
-                  borderRadius: '20px',
-                  borderBottom: '5px solid #ffbd39',
-                  height: '100%',
-                  textAlign: 'center',
-                  transition: 'all 0.3s ease',
-                  boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
-                  cursor: 'pointer'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-10px)';
-                  e.currentTarget.style.background = '#fff';
-                  e.currentTarget.style.boxShadow = '0 15px 40px rgba(255, 189, 57, 0.15)';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.background = '#f8f9fa';
-                  e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
-                }}
-              >
-                <div style={{ fontSize: window.innerWidth < 768 ? '2rem' : '2.5rem', marginBottom: '10px' }}>{feat.icon}</div>
-                <h3 style={{ 
-                  color: '#000', 
-                  fontWeight: '800', 
-                  fontSize: window.innerWidth < 768 ? '1.1rem' : '1.2rem',
-                  marginBottom: '8px'
-                }}>
-                  {feat.title}
-                </h3>
-                <p style={{ 
-                  color: '#666', 
-                  fontSize: window.innerWidth < 768 ? '0.85rem' : '0.95rem',
-                  lineHeight: '1.5',
-                  margin: 0
-                }}>
-                  {feat.desc}
-                </p>
-                <div style={{ 
-                  marginTop: '15px', 
-                  color: '#ffbd39', 
-                  fontSize: '0.8rem', 
-                  fontWeight: '700',
-                  textTransform: 'uppercase'
-                }}>
-                  En savoir plus +
-                </div>
-              </div>
-            </div>
+            <FeatureCard key={idx} feat={{...feat, onClick: () => setActiveFeature(feat)}} idx={idx} />
           ))}
         </div>
       </div>

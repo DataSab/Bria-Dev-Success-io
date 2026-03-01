@@ -1,8 +1,12 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const About = () => {
   const { t } = useLanguage();
+  const [titleRef, titleStyle] = useScrollReveal();
+  const [imgRef, imgStyle] = useScrollReveal({ delay: 0.2, distance: '50px' });
+  const [textRef, textStyle] = useScrollReveal({ delay: 0.4 });
 
   return (
     <section
@@ -16,7 +20,7 @@ const About = () => {
     >
       <div className="container">
         {/* Titre de la section */}
-        <div className="row justify-content-center mb-4">
+        <div ref={titleRef} style={titleStyle} className="row justify-content-center mb-4">
           <div className="col-md-12 text-center">
             <h2 style={{
               fontSize: 'clamp(1.6rem, 6vw, 2.5rem)',
@@ -33,7 +37,7 @@ const About = () => {
         </div>
 
         <div className="row align-items-start justify-content-center">
-          <div className="col-lg-5 text-center mb-4 mb-lg-0">
+          <div ref={imgRef} style={imgStyle} className="col-lg-5 text-center mb-4 mb-lg-0">
             {/* Logo officiel - Compact */}
             <div className="profile-img-container" style={{ position: 'relative', display: 'inline-block' }}>
               <img
@@ -52,7 +56,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="col-lg-7">
+          <div ref={textRef} style={textStyle} className="col-lg-7">
             <div className="about-text-content" style={{ 
               paddingLeft: window.innerWidth < 992 ? '0' : '20px',
               textAlign: window.innerWidth < 992 ? 'center' : 'left'

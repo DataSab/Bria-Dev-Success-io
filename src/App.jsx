@@ -3,6 +3,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import Stats from './components/Stats';
 import About from './components/About';
 import TechStack from './components/TechStack';
 import CareerPaths from './components/CareerPaths';
@@ -20,6 +21,7 @@ function App() {
         <Navbar />
         <Hero />
         <Features />
+        <Stats />
         <About />
         <TechStack />
         <CareerPaths />

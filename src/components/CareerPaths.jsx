@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const CareerPaths = () => {
   const [activeTab, setActiveTab] = useState('web_mobile');
+  const [headerRef, headerStyle] = useScrollReveal();
+  const [tabsRef, tabsStyle] = useScrollReveal({ delay: 0.2 });
+  const [detailsRef, detailsStyle] = useScrollReveal({ delay: 0.4 });
 
   const careerPaths = {
     web_mobile: {
@@ -126,7 +130,7 @@ const CareerPaths = () => {
     }}>
       <div className="container">
         {/* Header */}
-        <div className="row justify-content-center mb-5">
+        <div ref={headerRef} style={headerStyle} className="row justify-content-center mb-5">
           <div className="col-md-10 text-center">
             <h2 className="mb-4" style={{
               fontWeight: '800',
@@ -152,7 +156,7 @@ const CareerPaths = () => {
         </div>
 
         {/* Career Tabs - Grille 2 colonnes avec espacement supérieur */}
-        <div className="row justify-content-center" style={{ marginBottom: '80px', marginTop: '20px' }}>
+        <div ref={tabsRef} className="row justify-content-center" style={{ ...tabsStyle, marginBottom: '80px', marginTop: '20px' }}>
           <div className="col-md-12">
             <div className="mx-auto" style={{ 
               display: 'grid',
@@ -203,9 +207,9 @@ const CareerPaths = () => {
         </div>
 
         {/* Career Details - Espacement ajouté avec marginTop */}
-        <div className="row justify-content-center" style={{ marginTop: '40px' }}>
+        <div ref={detailsRef} className="row justify-content-center" style={{ ...detailsStyle, marginTop: '40px' }}>
           <div className="col-lg-11 col-xl-10">
-            <div className="mx-auto" style={{
+            <div key={activeTab} className="mx-auto" style={{
               background: 'linear-gradient(145deg, #ffffff 0%, #f8fafc 100%)',
               borderRadius: '20px',
               padding: '40px 35px',
@@ -213,7 +217,8 @@ const CareerPaths = () => {
               border: '1px solid rgba(255,255,255,0.3)',
               position: 'relative',
               overflow: 'hidden',
-              minHeight: '400px'
+              minHeight: '400px',
+              animation: 'fadeInUp 0.5s ease-out'
             }}>
               {/* Header Card */}
               <div className="row mb-4">
