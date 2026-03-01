@@ -2,6 +2,7 @@ import React from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Features from './components/Features';
 import About from './components/About';
 import TechStack from './components/TechStack';
 import CareerPaths from './components/CareerPaths';
@@ -18,6 +19,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Hero />
+        <Features />
         <About />
         <TechStack />
         <CareerPaths />
