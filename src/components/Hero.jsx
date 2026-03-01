@@ -92,7 +92,7 @@ const Hero = () => {
                   backgroundColor: '#000'
                 }}
               >
-                <source src="/images/hero-video.mp4" type="video/mp4" />
+                <source src="images/hero-video.mp4" type="video/mp4" />
                 Votre navigateur ne supporte pas la vidéo.
               </video>
             </div>
