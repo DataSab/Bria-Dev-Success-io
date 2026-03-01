@@ -26,6 +26,12 @@ const translations = {
   'features.practice.desc': 'Conseils pour appliquer concrètement.',
   'features.orientation.title': 'L’orientation',
   'features.orientation.desc': 'Choisir votre voie sans vous éparpiller.',
+  'features.close': 'Fermer la fiche',
+
+  // Features Details (Modals)
+  'features.tools.detail': 'Pour bien démarrer, vous avez besoin d\'un environnement solide. Je vous recommande VS Code comme éditeur, Git pour sauvegarder votre code, et de vous familiariser avec le terminal. Ne collectionnez pas les outils, apprenez à maîtriser les essentiels.',
+  'features.practice.detail': 'La théorie ne suffit pas. Créez des petits projets dès la première semaine. Utilisez GitHub pour montrer votre progression. Si vous visez la cybersécurité, pratiquez sur des plateformes comme TryHackMe ou HackTheBox pour manipuler de vrais outils.',
+  'features.orientation.detail': 'Le domaine est vaste : Web, Data, Cyber, Cloud... Testez un peu de tout au début pour voir ce qui vous passionne. L\'important est de choisir une direction claire pour éviter l\'épuisement et rester focalisé sur un objectif atteignable.',
 
   // About Section
   'about.title': 'Qui suis-je ?',

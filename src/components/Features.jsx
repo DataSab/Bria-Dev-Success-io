@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Features = () => {
   const { t } = useLanguage();
+  const [activeFeature, setActiveFeature] = useState(null);
 
   const features = [
-    { title: t('features.tools.title'), desc: t('features.tools.desc'), icon: '🛠️' },
-    { title: t('features.practice.title'), desc: t('features.practice.desc'), icon: '💻' },
-    { title: t('features.orientation.title'), desc: t('features.orientation.desc'), icon: '🧭' }
+    { 
+      id: 'tools',
+      title: t('features.tools.title'), 
+      desc: t('features.tools.desc'), 
+      detail: t('features.tools.detail'),
+      icon: '🛠️' 
+    },
+    { 
+      id: 'practice',
+      title: t('features.practice.title'), 
+      desc: t('features.practice.desc'), 
+      detail: t('features.practice.detail'),
+      icon: '💻' 
+    },
+    { 
+      id: 'orientation',
+      title: t('features.orientation.title'), 
+      desc: t('features.orientation.desc'), 
+      detail: t('features.orientation.detail'),
+      icon: '🧭' 
+    }
   ];
 
   return (
@@ -21,16 +40,30 @@ const Features = () => {
         <div className="row justify-content-center">
           {features.map((feat, idx) => (
             <div key={idx} className="col-md-4 col-sm-6 mb-4">
-              <div style={{
-                background: '#f8f9fa',
-                padding: window.innerWidth < 768 ? '20px' : '30px',
-                borderRadius: '20px',
-                borderBottom: '5px solid #ffbd39',
-                height: '100%',
-                textAlign: 'center',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.05)'
-              }}>
+              <div 
+                onClick={() => setActiveFeature(feat)}
+                style={{
+                  background: '#f8f9fa',
+                  padding: window.innerWidth < 768 ? '20px' : '30px',
+                  borderRadius: '20px',
+                  borderBottom: '5px solid #ffbd39',
+                  height: '100%',
+                  textAlign: 'center',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+                  cursor: 'pointer'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-10px)';
+                  e.currentTarget.style.background = '#fff';
+                  e.currentTarget.style.boxShadow = '0 15px 40px rgba(255, 189, 57, 0.15)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.background = '#f8f9fa';
+                  e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
+                }}
+              >
                 <div style={{ fontSize: window.innerWidth < 768 ? '2rem' : '2.5rem', marginBottom: '10px' }}>{feat.icon}</div>
                 <h3 style={{ 
                   color: '#000', 
@@ -48,11 +81,102 @@ const Features = () => {
                 }}>
                   {feat.desc}
                 </p>
+                <div style={{ 
+                  marginTop: '15px', 
+                  color: '#ffbd39', 
+                  fontSize: '0.8rem', 
+                  fontWeight: '700',
+                  textTransform: 'uppercase'
+                }}>
+                  En savoir plus +
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Modal / Fiche Explicative */}
+      {activeFeature && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0,0,0,0.8)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 9999,
+          padding: '20px',
+          backdropFilter: 'blur(5px)'
+        }} onClick={() => setActiveFeature(null)}>
+          <div style={{
+            background: '#fff',
+            padding: '40px',
+            borderRadius: '25px',
+            maxWidth: '600px',
+            width: '100%',
+            position: 'relative',
+            boxShadow: '0 25px 60px rgba(0,0,0,0.3)',
+            animation: 'fadeInUp 0.4s ease-out'
+          }} onClick={(e) => e.stopPropagation()}>
+            <button 
+              onClick={() => setActiveFeature(null)}
+              style={{
+                position: 'absolute',
+                top: '20px',
+                right: '20px',
+                background: 'none',
+                border: 'none',
+                fontSize: '1.5rem',
+                cursor: 'pointer',
+                color: '#ccc'
+              }}
+            >✕</button>
+            
+            <div style={{ fontSize: '3rem', marginBottom: '20px', textAlign: 'center' }}>{activeFeature.icon}</div>
+            <h3 style={{ 
+              color: '#000', 
+              fontWeight: '900', 
+              fontSize: '1.8rem', 
+              textAlign: 'center',
+              marginBottom: '20px'
+            }}>
+              {activeFeature.title}
+            </h3>
+            <p style={{ 
+              color: '#444', 
+              fontSize: '1.1rem', 
+              lineHeight: '1.8', 
+              textAlign: 'center',
+              marginBottom: '30px'
+            }}>
+              {activeFeature.detail}
+            </p>
+            <div style={{ textAlign: 'center' }}>
+              <button 
+                onClick={() => setActiveFeature(null)}
+                style={{
+                  background: '#ffbd39',
+                  color: '#000',
+                  border: 'none',
+                  padding: '12px 30px',
+                  borderRadius: '50px',
+                  fontWeight: '800',
+                  cursor: 'pointer',
+                  fontSize: '0.9rem',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 5px 15px rgba(255, 189, 57, 0.3)'
+                }}
+              >
+                {t('features.close')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
