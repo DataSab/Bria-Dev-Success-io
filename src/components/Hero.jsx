@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import ParticlesBackground from './ParticlesBackground';
 
 const Hero = () => {
   const { t } = useLanguage();
   const [text, setText] = useState('');
+  const videoRef = useRef(null);
   const fullText = t('hero.title');
   
   useEffect(() => {
@@ -17,6 +18,14 @@ const Hero = () => {
     }, 100);
     return () => clearInterval(interval);
   }, [fullText]);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(err => {
+        console.log("Autoplay prevented or video error:", err);
+      });
+    }
+  }, []);
 
   return (
     <section id="home-section" className="hero-wrap animated-bg" style={{
@@ -95,9 +104,12 @@ const Hero = () => {
               boxShadow: '0 20px 50px rgba(0,0,0,0.6)',
               border: '3px solid #ffbd39',
               background: '#000',
-              position: 'relative'
+              position: 'relative',
+              zIndex: 20, /* Priorité absolue sur le clic */
+              cursor: 'pointer'
             }}>
               <video
+                ref={videoRef}
                 autoPlay
                 loop
                 muted
