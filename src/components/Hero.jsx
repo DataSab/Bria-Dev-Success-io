@@ -69,26 +69,31 @@ const Hero = () => {
 
             {/* Vidéo tech en boucle */}
             <div style={{
-              maxWidth: '900px',
+              maxWidth: '1200px',
+              width: '95%',
               margin: '0 auto 3rem',
               borderRadius: '20px',
               overflow: 'hidden',
               boxShadow: '0 10px 40px rgba(255,189,57,0.3)',
-              border: '2px solid rgba(255,189,57,0.2)'
+              border: '3px solid rgba(255,189,57,0.4)',
+              background: '#000'
             }}>
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
+                preload="auto"
                 style={{
                   width: '100%',
+                  minHeight: '400px',
                   height: 'auto',
-                  display: 'block'
+                  display: 'block',
+                  backgroundColor: '#000'
                 }}
               >
-                <source src="images/hero-video.mp4" type="video/mp4" />
-                <source src="images/hero-video.webm" type="video/webm" />
+                <source src="/images/hero-video.mp4" type="video/mp4" />
+                Votre navigateur ne supporte pas la vidéo.
               </video>
             </div>
 
