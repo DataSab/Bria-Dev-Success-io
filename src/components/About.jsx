@@ -10,13 +10,13 @@ const About = () => {
       id="about-section"
       style={{
         background: '#ffffff',
-        padding: '80px 0',
+        padding: '40px 0',
         scrollMarginTop: '80px'
       }}
     >
       <div className="container">
         {/* Titre de la section */}
-        <div className="row justify-content-center mb-5">
+        <div className="row justify-content-center mb-4">
           <div className="col-md-12 text-center">
             <h2 style={{
               fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
@@ -24,7 +24,7 @@ const About = () => {
               textTransform: 'uppercase',
               letterSpacing: '3px',
               color: '#000',
-              marginBottom: '1rem'
+              marginBottom: '0.8rem'
             }}>
               {t('about.title')}
             </h2>
@@ -32,7 +32,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="row align-items-center justify-content-center">
+        <div className="row align-items-start justify-content-center">
           <div className="col-lg-5 text-center mb-5 mb-lg-0">
             {/* Logo officiel - Compact */}
             <div className="profile-img-container" style={{ position: 'relative', display: 'inline-block' }}>

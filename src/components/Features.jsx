@@ -13,7 +13,7 @@ const Features = () => {
   return (
     <section id="features-section" style={{
       background: '#ffffff',
-      padding: '60px 0',
+      padding: '60px 0 20px',
       position: 'relative',
       zIndex: 5
     }}>
