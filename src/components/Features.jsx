@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import ToolsDetail from './features/ToolsDetail';
+import PracticeDetail from './features/PracticeDetail';
+import OrientationDetail from './features/OrientationDetail';
 
 const FeatureCard = ({ feat, idx }) => {
   const [revealRef, revealStyle] = useScrollReveal({ delay: idx * 0.1 });
@@ -77,21 +80,21 @@ const Features = () => {
       id: 'tools',
       title: t('features.tools.title'), 
       desc: t('features.tools.desc'), 
-      detail: t('features.tools.detail'),
+      component: <ToolsDetail />,
       icon: '🛠️' 
     },
     { 
       id: 'practice',
       title: t('features.practice.title'), 
       desc: t('features.practice.desc'), 
-      detail: t('features.practice.detail'),
+      component: <PracticeDetail />,
       icon: '💻' 
     },
     { 
       id: 'orientation',
       title: t('features.orientation.title'), 
       desc: t('features.orientation.desc'), 
-      detail: t('features.orientation.detail'),
+      component: <OrientationDetail />,
       icon: '🧭' 
     }
   ];
@@ -129,7 +132,7 @@ const Features = () => {
         }} onClick={() => setActiveFeature(null)}>
           <div style={{
             background: '#fff',
-            padding: '40px',
+            padding: window.innerWidth < 768 ? '30px 20px' : '40px',
             borderRadius: '25px',
             maxWidth: '600px',
             width: '100%',
@@ -161,15 +164,11 @@ const Features = () => {
             }}>
               {activeFeature.title}
             </h3>
-            <p style={{ 
-              color: '#444', 
-              fontSize: '1.1rem', 
-              lineHeight: '1.8', 
-              textAlign: 'center',
-              marginBottom: '30px'
-            }}>
-              {activeFeature.detail}
-            </p>
+            
+            <div style={{ marginBottom: '30px' }}>
+              {activeFeature.component}
+            </div>
+
             <div style={{ textAlign: 'center' }}>
               <button 
                 onClick={() => setActiveFeature(null)}
