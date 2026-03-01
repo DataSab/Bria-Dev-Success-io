@@ -19,16 +19,40 @@ const Hero = () => {
 
   return (
     <section id="home-section" className="hero-wrap" style={{
-      background: 'url("images/photo-style-cartoon-3x.jpeg") no-repeat center center fixed',
-      backgroundSize: 'cover',
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'flex-end',
       paddingTop: '20px',
       paddingBottom: '8vh',
-      position: 'relative'
+      position: 'relative',
+      overflow: 'hidden'
     }}>
-      <div className="overlay" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)' }}></div>
+      {/* Vidéo en arrière-plan */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          minWidth: '100%',
+          minHeight: '100%',
+          width: 'auto',
+          height: 'auto',
+          transform: 'translate(-50%, -50%)',
+          zIndex: 0,
+          objectFit: 'cover'
+        }}
+      >
+        <source src="images/hero-video.mp4" type="video/mp4" />
+        <source src="images/hero-video.webm" type="video/webm" />
+        {/* Image de secours si la vidéo ne charge pas */}
+        <img src="images/photo-style-cartoon-3x.jpeg" alt="Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      </video>
+
+      <div className="overlay" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', zIndex: 1 }}></div>
 
       {/* Logo en haut à gauche */}
       <img

@@ -16,6 +16,11 @@ html, body {
 /* Desktop: 1025px+ */
 
 /* ===== HERO SECTION RESPONSIVE ===== */
+/* Vidéo Hero responsive */
+#home-section video {
+  object-fit: cover;
+}
+
 /* Logo Hero responsive */
 .hero-logo {
   max-height: 70px !important;
