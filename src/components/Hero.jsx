@@ -35,28 +35,30 @@ const Hero = () => {
       justifyContent: 'center',
       position: 'relative',
       overflow: 'hidden',
-      paddingTop: '130px', 
-      paddingBottom: '40px'
+      paddingTop: window.innerWidth < 768 ? '100px' : '130px', 
+      paddingBottom: '40px',
+      paddingLeft: '15px',
+      paddingRight: '15px'
     }}>
       <ParticlesBackground />
 
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="row align-items-center justify-content-center">
           {/* Colonne Texte */}
-          <div className="col-lg-6 text-center text-lg-left mb-5 mb-lg-0">
+          <div className="col-lg-6 text-center text-lg-left mb-4 mb-lg-0">
             <span className="subheading" style={{ 
               color: '#ffbd39', 
-              fontSize: 'clamp(0.9rem, 3vw, 1.4rem)', 
+              fontSize: 'clamp(0.85rem, 4vw, 1.4rem)', 
               fontWeight: '800', 
               letterSpacing: '2px', 
               display: 'block', 
-              marginBottom: '1rem',
+              marginBottom: '0.8rem',
               textShadow: '2px 2px 10px rgba(0,0,0,0.8)'
             }}>{t('hero.subtitle')}</span>
 
             <h1 className="mb-3" style={{
               color: '#fff',
-              fontSize: 'clamp(1.8rem, 5vw, 3.5rem)',
+              fontSize: 'clamp(1.4rem, 7vw, 3rem)',
               fontWeight: '900',
               textShadow: '0 0 20px rgba(0,0,0,0.8)',
               lineHeight: '1.2'
@@ -65,10 +67,10 @@ const Hero = () => {
             </h1>
 
             <blockquote style={{
-              fontSize: 'clamp(0.8rem, 2vw, 0.95rem)',
+              fontSize: 'clamp(0.75rem, 3.5vw, 0.95rem)',
               fontStyle: 'italic',
               color: 'rgba(255,255,255,0.7)',
-              marginBottom: '1.5rem',
+              marginBottom: '1.2rem',
               lineHeight: '1.4',
               borderLeft: 'none',
               padding: '0'
@@ -77,32 +79,32 @@ const Hero = () => {
             </blockquote>
 
             <p className="lead text-white mb-4" style={{
-              fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)',
+              fontSize: 'clamp(0.85rem, 4vw, 1.1rem)',
               lineHeight: '1.5',
               opacity: 0.9,
               maxWidth: '600px',
-              margin: '0 auto 2rem 0'
+              margin: '0 auto 1.5rem auto'
             }}>
               {t('hero.welcome')}
             </p>
 
             <div className="hero-buttons" style={{ 
               display: 'flex', 
-              gap: '1rem', 
+              gap: '0.8rem', 
               justifyContent: 'center',
               flexWrap: 'wrap'
             }}>
               <a href="#about-section" className="btn btn-primary" style={{
                 borderRadius: '50px',
                 fontWeight: '700',
-                padding: '12px 30px',
-                fontSize: '0.85rem',
+                padding: '10px 25px',
+                fontSize: '0.8rem',
                 background: '#fff',
                 color: '#000',
                 border: '2px solid #fff',
                 transition: 'all 0.3s ease',
                 textDecoration: 'none',
-                minWidth: '180px',
+                minWidth: '160px',
                 textTransform: 'uppercase',
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -112,14 +114,14 @@ const Hero = () => {
               <a href="#skills-section" className="btn btn-outline-white" style={{
                 borderRadius: '50px',
                 fontWeight: '700',
-                padding: '12px 30px',
-                fontSize: '0.85rem',
+                padding: '10px 25px',
+                fontSize: '0.8rem',
                 background: '#ffbd39',
                 color: '#000',
                 border: '2px solid #ffbd39',
                 transition: 'all 0.3s ease',
                 textDecoration: 'none',
-                minWidth: '180px',
+                minWidth: '160px',
                 textTransform: 'uppercase',
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -131,13 +133,13 @@ const Hero = () => {
           {/* Colonne Vidéo */}
           <div className="col-lg-6 text-center">
             <div className="hero-video-player" style={{
-              maxWidth: '600px',
+              maxWidth: '100%',
               width: '100%',
               margin: '0 auto',
-              borderRadius: '20px',
+              borderRadius: '15px',
               overflow: 'hidden',
-              boxShadow: '0 20px 50px rgba(0,0,0,0.6)',
-              border: '3px solid #ffbd39',
+              boxShadow: '0 15px 40px rgba(0,0,0,0.6)',
+              border: '2px solid #ffbd39',
               background: '#000',
               position: 'relative',
               zIndex: 100,
@@ -155,7 +157,7 @@ const Hero = () => {
                   width: '100%',
                   height: 'auto',
                   display: 'block',
-                  maxHeight: '40vh'
+                  maxHeight: '35vh'
                 }}
               >
                 <source src="/hero-video.mp4" type="video/mp4" />

@@ -13,17 +13,17 @@ const Features = () => {
   return (
     <section id="features-section" style={{
       background: '#ffffff',
-      padding: '60px 0 20px',
+      padding: window.innerWidth < 768 ? '40px 15px 10px' : '60px 0 20px',
       position: 'relative',
       zIndex: 5
     }}>
       <div className="container">
         <div className="row justify-content-center">
           {features.map((feat, idx) => (
-            <div key={idx} className="col-md-4 mb-4">
+            <div key={idx} className="col-md-4 col-sm-6 mb-4">
               <div style={{
                 background: '#f8f9fa',
-                padding: '30px',
+                padding: window.innerWidth < 768 ? '20px' : '30px',
                 borderRadius: '20px',
                 borderBottom: '5px solid #ffbd39',
                 height: '100%',
@@ -31,18 +31,18 @@ const Features = () => {
                 transition: 'all 0.3s ease',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.05)'
               }}>
-                <div style={{ fontSize: '2.5rem', marginBottom: '15px' }}>{feat.icon}</div>
+                <div style={{ fontSize: window.innerWidth < 768 ? '2rem' : '2.5rem', marginBottom: '10px' }}>{feat.icon}</div>
                 <h3 style={{ 
                   color: '#000', 
                   fontWeight: '800', 
-                  fontSize: '1.2rem',
-                  marginBottom: '10px'
+                  fontSize: window.innerWidth < 768 ? '1.1rem' : '1.2rem',
+                  marginBottom: '8px'
                 }}>
                   {feat.title}
                 </h3>
                 <p style={{ 
                   color: '#666', 
-                  fontSize: '0.95rem',
+                  fontSize: window.innerWidth < 768 ? '0.85rem' : '0.95rem',
                   lineHeight: '1.5',
                   margin: 0
                 }}>
