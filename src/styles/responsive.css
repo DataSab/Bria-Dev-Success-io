@@ -44,8 +44,9 @@ html, body {
 
 @media (max-width: 768px) {
   #home-section {
-    height: 100vh !important;
-    padding-bottom: 4vh !important;
+    min-height: 100vh !important;
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
     background-position: center center !important;
     background-attachment: scroll !important;
   }
@@ -53,39 +54,83 @@ html, body {
   #home-section .container {
     padding: 0 15px !important;
   }
-  
+
   #home-section h1 {
     font-size: 2rem !important;
     line-height: 1.2 !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 15px !important;
     padding: 0 10px !important;
   }
-  
+
   #home-section .subheading {
     font-size: 1rem !important;
-    letter-spacing: 1px !important;
-    margin-bottom: 15px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 12px !important;
   }
-  
+
   #home-section p.lead {
     font-size: 1rem !important;
     padding: 0 15px !important;
-    margin-bottom: 30px !important;
+    margin: 0 auto 20px !important;
     line-height: 1.4 !important;
   }
-  
+
+  /* Lecteur vidéo mobile */
+  .hero-video-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 25px 0 !important;
+    border-radius: 12px !important;
+    border-width: 2px !important;
+  }
+
+  .hero-video-container video,
+  #hero-video {
+    min-height: 200px !important;
+    max-height: 250px !important;
+    object-fit: cover !important;
+  }
+
+  /* Boutons mobile */
   .hero-buttons {
     flex-direction: column !important;
     gap: 12px !important;
     align-items: center !important;
+    padding: 0 20px !important;
   }
-  
+
   .hero-buttons a {
     width: 100% !important;
-    max-width: 250px !important;
+    max-width: 280px !important;
     margin: 0 !important;
-    padding: 12px 20px !important;
-    font-size: 0.95rem !important;
+    padding: 14px 24px !important;
+    font-size: 0.85rem !important;
+    min-width: auto !important;
+  }
+}
+
+/* Tablette */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #home-section h1 {
+    font-size: 3rem !important;
+  }
+
+  #home-section .subheading {
+    font-size: 1.4rem !important;
+  }
+
+  #home-section p.lead {
+    font-size: 1.3rem !important;
+  }
+
+  .hero-video-container {
+    width: 90% !important;
+    margin: 0 auto 2.5rem !important;
+  }
+
+  .hero-video-container video,
+  #hero-video {
+    min-height: 300px !important;
   }
 }
 

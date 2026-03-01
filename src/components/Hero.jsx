@@ -68,32 +68,41 @@ const Hero = () => {
             </p>
 
             {/* Vidéo tech en boucle */}
-            <div style={{
+            <div className="hero-video-container" style={{
               maxWidth: '1200px',
               width: '95%',
               margin: '0 auto 3rem',
               borderRadius: '20px',
               overflow: 'hidden',
               boxShadow: '0 10px 40px rgba(255,189,57,0.3)',
-              border: '3px solid rgba(255,189,57,0.4)',
-              background: '#000'
+              border: '3px solid #ffbd39',
+              background: '#ff0000',
+              position: 'relative',
+              zIndex: 100
             }}>
               <video
+                id="hero-video"
+                controls
                 autoPlay
                 loop
                 muted
                 playsInline
-                preload="auto"
+                preload="metadata"
                 style={{
                   width: '100%',
-                  minHeight: '400px',
                   height: 'auto',
+                  minHeight: '400px',
                   display: 'block',
-                  backgroundColor: '#000'
+                  backgroundColor: '#000',
+                  position: 'relative',
+                  zIndex: 101
                 }}
+                onError={(e) => console.error('Erreur vidéo:', e)}
+                onLoadedData={() => console.log('Vidéo chargée!')}
               >
+                <source src="/images/hero-video.mp4" type="video/mp4" />
                 <source src="images/hero-video.mp4" type="video/mp4" />
-                Votre navigateur ne supporte pas la vidéo.
+                <p style={{color: 'white', padding: '20px'}}>Votre navigateur ne supporte pas la vidéo HTML5.</p>
               </video>
             </div>
 
