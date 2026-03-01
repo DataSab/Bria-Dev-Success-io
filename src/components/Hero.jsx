@@ -72,7 +72,7 @@ const Hero = () => {
       <div className="container" style={{ position: 'relative', zIndex: 2, marginBottom: '5vh' }}>
         <div className="row slider-text align-items-center justify-content-center">
           <div className="col-md-10 text-center">
-            <span className="subheading" style={{ color: '#ffbd39', fontSize: '1.8rem', fontWeight: '800', letterSpacing: '5px', textShadow: '2px 2px 10px rgba(0,0,0,0.8)', display: 'block', marginBottom: '1rem' }}>{t('hero.subtitle')}</span>
+            <span className="subheading" style={{ color: '#ffbd39', fontSize: '1.8rem', fontWeight: '800', letterSpacing: '5px', textShadow: '2px 2px 10px rgba(0,0,0,0.8)', display: 'block', marginBottom: '1rem', textAlign: 'center' }}>{t('hero.subtitle')}</span>
             <h1 className="mb-4 mt-3 mx-auto" style={{ 
               color: '#fff', 
               fontSize: '4.5rem', 
