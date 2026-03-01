@@ -11,17 +11,31 @@ const translations = {
   'nav.contact': 'Contact',
 
   // Hero Section
-  'hero.title': "Reconversion Professionnelle dans l'IT",
-  'hero.subtitle': 'BRIA DEV SUCCESS (BDS)',
-  'hero.description': 'Ressources, retours d\'expérience et outils pour réussir sa reconversion numérique.',
-  'hero.btn.about': 'À Propos',
-  'hero.btn.roadmaps': 'Roadmaps IT',
+  'hero.title': 'Envisager sa reconversion dans l’informatique',
+  'hero.subtitle': 'BRIA DEV SUCCESS (BDV) 👋',
+  'hero.quote': '« Votre temps est limité, ne le gâchez pas en menant une existence qui n’est pas la vôtre. » — Steve Jobs',
+  'hero.welcome': "Se reconvertir dans l’IT est un défi passionnant, mais il est facile de se perdre. J'ai créé cet espace pour vous aider à y voir plus clair et à avancer sereinement.",
+  'hero.btn.about': 'Découvrir mon parcours',
+  'hero.btn.roadmaps': 'Voir les Roadmaps',
+
+  // What you will find here
+  'features.title': 'Ce que vous trouverez ici',
+  'features.tools.title': 'Outils clés',
+  'features.tools.desc': 'Pour bien démarrer et progresser.',
+  'features.practice.title': 'La pratique',
+  'features.practice.desc': 'Conseils pour appliquer concrètement.',
+  'features.orientation.title': 'L’orientation',
+  'features.orientation.desc': 'Choisir votre voie sans vous éparpiller.',
 
   // About Section
-  'about.title': 'Mon Parcours',
-  'about.paragraph1': 'Après plusieurs années dans le secteur tertiaire, j\'ai entrepris une reconversion professionnelle vers les métiers du numérique. Cette transition, bien que challengeante, s\'est révélée être une des meilleures décisions de ma vie.',
-  'about.paragraph2': 'BRIA DEV SUCCESS est né de cette expérience. C\'est une plateforme dédiée à celles et ceux qui, comme moi, souhaitent donner un nouveau souffle à leur carrière en se tournant vers l\'IT.',
-  'about.paragraph3': 'Mon objectif ? Partager des ressources, des retours d\'expérience et des conseils pratiques pour vous accompagner dans cette aventure passionnante qu\'est la reconversion numérique.',
+  'about.title': 'Qui suis-je ?',
+  'about.intro': "Je m’appelle Bria. Passionnée par le code et la sécurité numérique, j'ai suivi un parcours de développeuse full-stack pour comprendre comment naissent les applications.",
+  'about.specialization': "Aujourd'hui, je me spécialise en cybersécurité. Mon but est de partager mon expérience de terrain pour vous faire gagner du temps.",
+  'about.goal.title': 'Mon objectif : Vous guider',
+  'about.goal.1': 'Savoir par où commencer concrètement.',
+  'about.goal.2': 'Éviter les erreurs classiques de débutant.',
+  'about.goal.3': 'Structurer votre apprentissage pour rester motivé.',
+  'about.footer': 'Alors, prêt à construire votre projet dans la tech ?',
 
   // Tech Stack
   'tech.title': 'Technologies Maîtrisées',

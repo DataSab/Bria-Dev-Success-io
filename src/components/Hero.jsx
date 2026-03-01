@@ -35,7 +35,7 @@ const Hero = () => {
       justifyContent: 'center',
       position: 'relative',
       overflow: 'hidden',
-      padding: '100px 20px 60px'
+      padding: '120px 20px 60px'
     }}>
       <ParticlesBackground />
 
@@ -50,7 +50,7 @@ const Hero = () => {
           src="/images/logo-briadev.png"
           alt="BRIA DEV SUCCESS Logo"
           style={{
-            maxHeight: '60px',
+            maxHeight: '50px',
             width: 'auto',
             filter: 'drop-shadow(0 4px 15px rgba(255,189,57,0.4))'
           }}
@@ -61,51 +61,85 @@ const Hero = () => {
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="row slider-text align-items-center justify-content-center">
           <div className="col-md-11 text-center">
-            <span className="subheading" style={{ 
-              color: '#ffbd39', 
-              fontSize: 'clamp(1rem, 4vw, 1.8rem)', 
-              fontWeight: '800', 
-              letterSpacing: '3px', 
-              textShadow: '2px 2px 10px rgba(0,0,0,0.8)', 
-              display: 'block', 
-              marginBottom: '0.2rem' 
-            }}>{t('hero.subtitle')}</span>
-            
-            <h1 className="mb-3 mt-3 mx-auto" style={{
+            <h1 className="mb-2" style={{
               color: '#fff',
-              fontSize: 'clamp(2rem, 8vw, 4.5rem)',
+              fontSize: 'clamp(1.5rem, 5vw, 3rem)',
               fontWeight: '900',
-              textShadow: '0 0 30px rgba(0,0,0,1)',
+              textShadow: '0 0 20px rgba(0,0,0,0.8)',
               maxWidth: '1000px',
-              lineHeight: '1.1',
-              wordWrap: 'break-word'
+              margin: '0 auto',
+              lineHeight: '1.2'
             }}>
-              {text}
+              {t('hero.title')}
             </h1>
 
-            <p className="lead text-white font-weight-bold mb-3 mx-auto" style={{
-              fontSize: 'clamp(0.9rem, 3vw, 1.4rem)',
-              textShadow: '2px 2px 10px rgba(0,0,0,0.9)',
-              maxWidth: '800px',
+            <span className="subheading" style={{ 
+              color: '#ffbd39', 
+              fontSize: 'clamp(0.9rem, 3vw, 1.4rem)', 
+              fontWeight: '800', 
+              letterSpacing: '2px', 
+              display: 'block', 
+              marginBottom: '1rem' 
+            }}>{t('hero.subtitle')}</span>
+
+            <blockquote style={{
+              fontSize: 'clamp(0.8rem, 2vw, 1rem)',
+              fontStyle: 'italic',
+              color: 'rgba(255,255,255,0.7)',
+              maxWidth: '700px',
               margin: '0 auto 1rem',
-              color: '#fff',
-              lineHeight: '1.5'
+              lineHeight: '1.4',
+              borderLeft: 'none',
+              padding: '0 20px'
             }}>
-              {t('hero.description')}
+              {t('hero.quote')}
+            </blockquote>
+
+            <p className="lead text-white mb-4 mx-auto" style={{
+              fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)',
+              maxWidth: '850px',
+              margin: '0 auto 2rem',
+              lineHeight: '1.5',
+              opacity: 0.9
+            }}>
+              {t('hero.welcome')}
             </p>
+
+            {/* Section "Ce que vous trouverez ici" - Compacte */}
+            <div className="d-flex justify-content-center flex-wrap gap-3 mb-4">
+              {[
+                { title: t('features.tools.title'), desc: t('features.tools.desc'), icon: '🛠️' },
+                { title: t('features.practice.title'), desc: t('features.practice.desc'), icon: '💻' },
+                { title: t('features.orientation.title'), desc: t('features.orientation.desc'), icon: '🧭' }
+              ].map((feat, idx) => (
+                <div key={idx} style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  padding: '12px',
+                  borderRadius: '15px',
+                  border: '1px solid rgba(255, 189, 57, 0.2)',
+                  width: '180px',
+                  backdropFilter: 'blur(5px)',
+                  textAlign: 'center'
+                }}>
+                  <div style={{ fontSize: '1.2rem', marginBottom: '5px' }}>{feat.icon}</div>
+                  <div style={{ color: '#ffbd39', fontWeight: '800', fontSize: '0.85rem' }}>{feat.title}</div>
+                  <div style={{ color: '#fff', fontSize: '0.7rem', opacity: 0.8 }}>{feat.desc}</div>
+                </div>
+              ))}
+            </div>
 
             {/* Lecteur Vidéo Interactif */}
             <div className="hero-video-player" style={{
-              maxWidth: '750px',
+              maxWidth: '700px',
               width: '100%',
-              margin: '0 auto 1rem',
+              margin: '0 auto 1.5rem',
               borderRadius: '20px',
               overflow: 'hidden',
               boxShadow: '0 20px 50px rgba(0,0,0,0.6)',
               border: '3px solid #ffbd39',
               background: '#000',
               position: 'relative',
-              zIndex: 100, /* Priorité MAXIMALE sur le clic */
+              zIndex: 100,
               cursor: 'pointer'
             }}>
               <video
@@ -120,7 +154,7 @@ const Hero = () => {
                   width: '100%',
                   height: 'auto',
                   display: 'block',
-                  maxHeight: '55vh'
+                  maxHeight: '45vh'
                 }}
               >
                 <source src="/hero-video.mp4" type="video/mp4" />
