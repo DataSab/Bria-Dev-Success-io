@@ -21,39 +21,12 @@ const Hero = () => {
     <section id="home-section" className="hero-wrap" style={{
       minHeight: '100vh',
       display: 'flex',
-      alignItems: 'flex-end',
-      paddingTop: '20px',
-      paddingBottom: '8vh',
+      alignItems: 'center',
+      paddingTop: '120px',
+      paddingBottom: '60px',
       position: 'relative',
-      overflow: 'hidden'
+      background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
     }}>
-      {/* Vidéo en arrière-plan */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          minWidth: '100%',
-          minHeight: '100%',
-          width: 'auto',
-          height: 'auto',
-          transform: 'translate(-50%, -50%)',
-          zIndex: 0,
-          objectFit: 'cover'
-        }}
-      >
-        <source src="images/hero-video.mp4" type="video/mp4" />
-        <source src="images/hero-video.webm" type="video/webm" />
-        {/* Image de secours si la vidéo ne charge pas */}
-        <img src="images/photo-style-cartoon-3x.jpeg" alt="Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-      </video>
-
-      <div className="overlay" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', zIndex: 1 }}></div>
-
       {/* Logo en haut à gauche */}
       <img
         src="images/logo-briadev.png"
@@ -69,30 +42,56 @@ const Hero = () => {
         className="hero-logo"
       />
 
-      <div className="container" style={{ position: 'relative', zIndex: 2, marginBottom: '5vh' }}>
+      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="row slider-text align-items-center justify-content-center">
           <div className="col-md-10 text-center">
             <span className="subheading" style={{ color: '#ffbd39', fontSize: '1.8rem', fontWeight: '800', letterSpacing: '5px', textShadow: '2px 2px 10px rgba(0,0,0,0.8)', display: 'block', marginBottom: '1rem', textAlign: 'center' }}>{t('hero.subtitle')}</span>
-            <h1 className="mb-4 mt-3 mx-auto" style={{ 
-              color: '#fff', 
-              fontSize: '4.5rem', 
-              fontWeight: '900', 
+            <h1 className="mb-4 mt-3 mx-auto" style={{
+              color: '#fff',
+              fontSize: '4.5rem',
+              fontWeight: '900',
               textShadow: '0 0 40px rgba(0,0,0,1), 0 0 20px rgba(255,189,57,0.3)',
               maxWidth: '1000px',
               lineHeight: '1.1'
             }}>
               {text}
             </h1>
-            <p className="lead text-white font-weight-bold mb-5 mx-auto" style={{ 
-              fontSize: '1.6rem', 
-              textShadow: '2px 2px 10px rgba(0,0,0,0.9)', 
-              maxWidth: '850px', 
-              margin: '0 auto 4rem', 
+            <p className="lead text-white font-weight-bold mb-5 mx-auto" style={{
+              fontSize: '1.6rem',
+              textShadow: '2px 2px 10px rgba(0,0,0,0.9)',
+              maxWidth: '850px',
+              margin: '0 auto 3rem',
               color: '#fff',
               lineHeight: '1.5'
             }}>
               {t('hero.description')}
             </p>
+
+            {/* Vidéo tech en boucle */}
+            <div style={{
+              maxWidth: '900px',
+              margin: '0 auto 3rem',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: '0 10px 40px rgba(255,189,57,0.3)',
+              border: '2px solid rgba(255,189,57,0.2)'
+            }}>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block'
+                }}
+              >
+                <source src="images/hero-video.mp4" type="video/mp4" />
+                <source src="images/hero-video.webm" type="video/webm" />
+              </video>
+            </div>
+
             <div className="hero-buttons" style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="#about-section" className="btn btn-primary py-4 px-5 shadow-lg" style={{
                 borderRadius: '50px',
