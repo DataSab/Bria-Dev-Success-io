@@ -133,6 +133,6 @@ npm run build
 npm run preview
 ```
 
-✨ *Projet conçu avec bienveillance pour accompagner les reconversions professionnelles dans le digital.*
+✨ *Projet conçu pour accompagner les reconversions professionnelles dans le digital.*
 
 ---
