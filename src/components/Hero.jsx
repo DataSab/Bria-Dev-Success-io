@@ -21,7 +21,7 @@ const Hero = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.75;
+      videoRef.current.playbackRate = 0.70;
       videoRef.current.play().catch(err => {
         console.log("Autoplay prevented or video error:", err);
       });
