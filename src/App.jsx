@@ -7,6 +7,7 @@ import About from './components/About';
 import TechStack from './components/TechStack';
 import CareerPaths from './components/CareerPaths';
 import Roadmaps from './components/Roadmaps';
+import Events from './components/Events';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import './index.css';
@@ -24,6 +25,7 @@ function App() {
         <TechStack />
         <CareerPaths />
         <Roadmaps />
+        <Events />
         <Projects />
         <Contact />
 

@@ -62,6 +62,7 @@ const Navbar = () => {
     { href: '#bases-section', label: t('nav.technologies') },
     { href: '#career-paths-section', label: t('nav.careers') },
     { href: '#skills-section', label: t('nav.roadmaps') },
+    { href: '#events-section', label: t('nav.events') },
     { href: '#projects-section', label: t('nav.projects') },
     { href: '#contact-section', label: t('nav.contact') }
   ];

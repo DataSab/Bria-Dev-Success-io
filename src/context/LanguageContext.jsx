@@ -79,8 +79,13 @@ const translations = {
   'projects.title': 'Blog & Articles',
   'projects.description': 'Retrouvez mes derniers articles et projets',
 
+  // Events
+  'nav.events': 'Agenda Events',
+  'events.title': 'Agenda Events',
+  'events.description': 'Salons, webinaires, rencontres de formation et opportunités d\'emploi pour réussir votre reconversion IT',
+
   // Contact
-  'contact.title': 'Contactez-moi',
+  'contact.title': 'Pour me contacter',
   'contact.btn': 'Email',
 
   // Footer
