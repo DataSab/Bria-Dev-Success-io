@@ -42,19 +42,18 @@ const Hero = () => {
     }}>
       <ParticlesBackground />
 
-      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+      <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1400px' }}>
         <div className="row align-items-center justify-content-center">
           {/* Colonne Texte */}
-          <div className="col-lg-6 text-center mb-3 mb-lg-0">
-            <span className="subheading" style={{ 
-              color: '#ffbd39', 
-              fontSize: 'clamp(0.8rem, 3.5vw, 1.2rem)', 
-              fontWeight: '800', 
-              letterSpacing: '2px', 
-              display: 'block', 
+          <div className="col-lg-5 text-center text-lg-start mb-3 mb-lg-0">
+            <span className="subheading" style={{
+              color: '#ffbd39',
+              fontSize: 'clamp(0.8rem, 3.5vw, 1.2rem)',
+              fontWeight: '800',
+              letterSpacing: '2px',
+              display: 'block',
               marginBottom: '0.5rem',
-              textShadow: '2px 2px 10px rgba(0,0,0,0.8)',
-              textAlign: 'center'
+              textShadow: '2px 2px 10px rgba(0,0,0,0.8)'
             }}>{t('hero.subtitle')}</span>
 
             <h1 className="mb-2" style={{
@@ -62,8 +61,7 @@ const Hero = () => {
               fontSize: 'clamp(1.2rem, 6vw, 2.8rem)',
               fontWeight: '900',
               textShadow: '0 0 20px rgba(0,0,0,0.8)',
-              lineHeight: '1.1',
-              textAlign: 'center'
+              lineHeight: '1.1'
             }}>
               {text}
             </h1>
@@ -75,8 +73,7 @@ const Hero = () => {
               marginBottom: '1rem',
               lineHeight: '1.3',
               borderLeft: 'none',
-              padding: '0',
-              textAlign: 'center'
+              padding: '0'
             }}>
               {t('hero.quote')}
             </blockquote>
@@ -86,16 +83,14 @@ const Hero = () => {
               lineHeight: '1.4',
               opacity: 0.9,
               maxWidth: '600px',
-              margin: '0 auto 1rem auto',
-              textAlign: 'center'
+              margin: '0 0 1rem 0'
             }}>
               {t('hero.welcome')}
             </p>
 
-            <div className="hero-buttons" style={{ 
-              display: 'flex', 
-              gap: '0.6rem', 
-              justifyContent: 'center',
+            <div className="hero-buttons" style={{
+              display: 'flex',
+              gap: '0.6rem',
               flexWrap: 'wrap'
             }}>
               <a href="#about-section" className="btn btn-primary" style={{
@@ -135,7 +130,7 @@ const Hero = () => {
           </div>
 
           {/* Colonne Vidéo */}
-          <div className="col-lg-6 text-center">
+          <div className="col-lg-7 text-center">
             <div className="hero-video-player" style={{
               maxWidth: '100%',
               width: '100%',

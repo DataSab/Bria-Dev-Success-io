@@ -294,7 +294,7 @@ p {
 /* Grand écran (desktop large) */
 @media (min-width: 1400px) {
     .hero-video-player {
-        max-width: 700px;
+        max-width: 100%;
     }
 
     .hero-video-player video {
@@ -306,7 +306,7 @@ p {
 /* Desktop standard */
 @media (min-width: 992px) and (max-width: 1399px) {
     .hero-video-player {
-        max-width: 600px;
+        max-width: 100%;
     }
 
     .hero-video-player video {

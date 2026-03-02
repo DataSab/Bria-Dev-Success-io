@@ -15,6 +15,13 @@ html, body {
 /* Tablet: 769px - 1024px */
 /* Desktop: 1025px+ */
 
+/* ===== DESKTOP HERO ALIGNMENT ===== */
+@media (min-width: 992px) {
+  .hero-buttons {
+    justify-content: flex-start !important;
+  }
+}
+
 /* ===== HERO SECTION RESPONSIVE ===== */
 /* Vidéo Hero responsive */
 #home-section video {
@@ -97,6 +104,7 @@ html, body {
     gap: 12px !important;
     align-items: center !important;
     padding: 0 20px !important;
+    justify-content: center !important;
   }
 
   .hero-buttons a {
