@@ -81,7 +81,7 @@ const translations = {
 
   // Contact
   'contact.title': 'Contactez-moi',
-  'contact.btn': 'Me Contacter',
+  'contact.btn': 'Email',
 
   // Footer
   'footer.rights': 'Tous droits réservés.',

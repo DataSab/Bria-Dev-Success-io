@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Contact = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="contact-section" style={{
       position: 'relative',
@@ -32,7 +35,7 @@ const Contact = () => {
           color: '#2c3e50',
           fontSize: '2.5rem'
         }}>
-          Contactez-moi
+          {t('contact.title')}
         </h2>
         
         {/* Main content */}
@@ -83,7 +86,7 @@ const Contact = () => {
             }}
           >
             <span className="me-2" style={{ fontSize: '1.3rem' }}>✉️</span>
-            Ecrivez-moi ici
+            {t('contact.btn')}
           </a>
         </div>
       </div>
