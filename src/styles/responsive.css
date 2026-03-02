@@ -69,7 +69,7 @@ html, body {
   }
 
   #home-section p.lead {
-    font-size: 1.1rem !important;
+    font-size: 0.9rem !important;
     padding: 0 15px !important;
     margin: 0 auto 20px !important;
     line-height: 1.5 !important;
@@ -101,10 +101,10 @@ html, body {
 
   .hero-buttons a {
     width: 100% !important;
-    max-width: 280px !important;
+    max-width: 250px !important;
     margin: 0 !important;
-    padding: 16px 26px !important;
-    font-size: 0.95rem !important;
+    padding: 12px 20px !important;
+    font-size: 0.8rem !important;
     min-width: auto !important;
   }
 }
