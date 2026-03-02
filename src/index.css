@@ -14,7 +14,7 @@ body {
 	line-height: 1.6;
 	color: #333;
 	overflow-x: hidden;
-	font-size: 14px;
+	font-size: 16px;
 	padding-top: 0;
 	margin-top: 0;
 	width: 100%;
@@ -277,19 +277,57 @@ p {
 }
 
 /* Responsive Video Player */
-.hero-video-player video {
-    max-height: 65vh; /* Plus grand sur PC */
+.hero-video-player {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (max-width: 991.98px) {
+.hero-video-player:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 70px rgba(255, 189, 57, 0.4), 0 15px 40px rgba(0,0,0,0.8) !important;
+}
+
+.hero-video-player video {
+    max-height: 70vh;
+    min-height: 400px;
+}
+
+/* Grand écran (desktop large) */
+@media (min-width: 1400px) {
+    .hero-video-player {
+        max-width: 700px;
+    }
+
     .hero-video-player video {
-        max-height: 45vh;
+        max-height: 75vh;
+        min-height: 500px;
     }
 }
 
+/* Desktop standard */
+@media (min-width: 992px) and (max-width: 1399px) {
+    .hero-video-player {
+        max-width: 600px;
+    }
+
+    .hero-video-player video {
+        max-height: 70vh;
+        min-height: 450px;
+    }
+}
+
+/* Tablette */
+@media (max-width: 991.98px) {
+    .hero-video-player video {
+        max-height: 45vh;
+        min-height: 300px;
+    }
+}
+
+/* Mobile */
 @media (max-width: 767.98px) {
     .hero-video-player video {
-        max-height: 30vh; /* Plus compact sur mobile pour éviter le scroll */
+        max-height: 30vh;
+        min-height: 200px;
     }
 }
 
@@ -708,7 +746,7 @@ p {
 	}
 
 	body {
-		font-size: 13px;
+		font-size: 15px;
 	}
 
 	.hero-container {

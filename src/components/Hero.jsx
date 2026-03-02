@@ -140,14 +140,15 @@ const Hero = () => {
               maxWidth: '100%',
               width: '100%',
               margin: '0 auto',
-              borderRadius: '15px',
+              borderRadius: '20px',
               overflow: 'hidden',
-              boxShadow: '0 15px 40px rgba(0,0,0,0.6)',
-              border: '2px solid #ffbd39',
+              boxShadow: '0 20px 60px rgba(255, 189, 57, 0.3), 0 10px 30px rgba(0,0,0,0.7)',
+              border: '3px solid #ffbd39',
               background: '#000',
               position: 'relative',
               zIndex: 100,
-              cursor: 'pointer'
+              cursor: 'pointer',
+              transition: 'all 0.3s ease'
             }}>
               <video
                 ref={videoRef}
