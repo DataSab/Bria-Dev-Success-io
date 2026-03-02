@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const RoadmapCard = ({ item, index }) => {
@@ -97,11 +97,27 @@ const Roadmaps = () => {
     ],
     ia: [
       { id: 1, title: 'BASES MATHS & PYTHON', description: 'Algèbre linéaire, statistiques, Python (Pandas, Numpy)', advice: 'Conseil : Soyez à l\'aise avec les données', color: '#f39c12' },
-      { id: 2, title: 'MACHINE LEARNING', description: 'Scikit-learn, algorithmes de régression, classification', advice: 'Conseil : Comprenez l\'algorithme avant le code', color: '#e67e22' },
+      { id: 2, title: 'MACHINE LEARNING', description: 'Scikit-learn, algorithmes de régression, classification', advice: 'Comprenez l\'algorithme avant le code', color: '#e67e22' },
       { id: 3, title: 'DEEP LEARNING & NLP', description: 'TensorFlow, PyTorch, réseaux de neurones, Transformers', advice: 'Conseil : Explorez les modèles pré-entraînés', color: '#d35400' },
       { id: 4, title: 'IA GÉNÉRATIVE', description: 'LLMs, Prompt Engineering, intégration d\'APIs IA', advice: 'Conseil : Suivez la veille technologique quotidienne', color: '#c0392b' },
+    ],
+    devops: [
+      { id: 1, title: 'LINUX & RÉSEAU', description: 'Administration Linux, Bash scripting, SSH, Networking.', advice: 'Conseil : Soyez à l\'aise avec la ligne de commande', color: '#f59e0b' },
+      { id: 2, title: 'CONTAINERISATION', description: 'Docker, Docker Compose, orchestration de base.', advice: 'Conseil : Apprenez à isoler vos applications', color: '#3b82f6' },
+      { id: 3, title: 'CI/CD & CLOUD', description: 'GitHub Actions, Jenkins, AWS ou Azure.', advice: 'Conseil : Automatisez tout ce qui est répétitif', color: '#10b981' },
+      { id: 4, title: 'INFRASTRUCTURE AS CODE', description: 'Terraform, Ansible, Kubernetes (K8s).', advice: 'Conseil : Gérez vos serveurs comme du code', color: '#6366f1' },
     ]
   };
+
+  useEffect(() => {
+    const handleSetRoadmap = (e) => {
+      if (e.detail && roadmapData[e.detail]) {
+        setActiveTab(e.detail);
+      }
+    };
+    window.addEventListener('setRoadmap', handleSetRoadmap);
+    return () => window.removeEventListener('setRoadmap', handleSetRoadmap);
+  }, []);
 
   const conseils = [
     { title: 'Bases Solides', desc: <>Ne brûlez pas les étapes.<br />Maîtrisez les fondamentaux avant les frameworks.</>, icon: 'icon-layers' },
@@ -120,33 +136,40 @@ const Roadmaps = () => {
           <div className="col-md-12 heading-section text-center">
             <h2 className="mb-4" style={{ fontWeight: '900', color: '#000', letterSpacing: '1px' }}>ROADMAPS PAR MÉTIER IT</h2>
             <p className="text-muted font-weight-bold mb-5">Choisissez votre domaine et découvrez le parcours étape par étape pour réussir votre reconversion.</p>
-            <div className="roadmap-tabs d-flex justify-content-center flex-wrap" style={{ gap: '25px', marginBottom: '60px' }}>
-              {['dev', 'cyber', 'ia'].map((tab) => {
+            <div className="roadmap-tabs d-flex justify-content-center flex-wrap" style={{ gap: '15px', marginBottom: '60px' }}>
+              {[
+                { id: 'dev', label: 'Développement' },
+                { id: 'cyber', label: 'Cybersécurité' },
+                { id: 'ia', label: 'IA & DATA' },
+                { id: 'devops', label: 'Cloud / DevOps' }
+              ].map((tab) => {
                 const colors = {
                   dev: '#ffbd39',
                   cyber: '#00ced1',
-                  ia: '#f39c12'
+                  ia: '#f39c12',
+                  devops: '#f59e0b'
                 };
                 return (
                   <button 
-                    key={tab}
-                    onClick={() => setActiveTab(tab)}
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
                     className="btn"
                     style={{ 
                       borderRadius: '30px', 
-                      padding: '18px 45px', 
+                      padding: '15px 35px', 
                       fontWeight: '900', 
                       textTransform: 'uppercase',
-                      background: activeTab === tab ? colors[tab] : 'transparent',
-                      color: activeTab === tab ? '#000' : colors[tab],
-                      border: `3px solid ${colors[tab]}`,
+                      background: activeTab === tab.id ? colors[tab.id] : 'transparent',
+                      color: activeTab === tab.id ? '#000' : colors[tab.id],
+                      border: `3px solid ${colors[tab.id]}`,
                       transition: 'all 0.3s ease',
-                      minWidth: '240px',
-                      boxShadow: activeTab === tab ? `0 12px 25px ${colors[tab]}50` : 'none',
-                      letterSpacing: '1px'
+                      minWidth: '200px',
+                      boxShadow: activeTab === tab.id ? `0 12px 25px ${colors[tab.id]}50` : 'none',
+                      letterSpacing: '1px',
+                      marginBottom: '10px'
                     }}
                   >
-                    {tab === 'dev' ? 'Développement' : tab === 'cyber' ? 'Cybersécurité' : 'IA & DATA'}
+                    {tab.label}
                   </button>
                 );
               })}
@@ -160,7 +183,6 @@ const Roadmaps = () => {
           ))}
         </div>
 
-        {/* Section Conseils additionnelle */}
         <div className="row justify-content-center" style={{ 
           paddingTop: '100px', 
           marginTop: '100px', 

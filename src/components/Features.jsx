@@ -75,6 +75,12 @@ const Features = () => {
   const { t } = useLanguage();
   const [activeFeature, setActiveFeature] = useState(null);
 
+  React.useEffect(() => {
+    const handleClose = () => setActiveFeature(null);
+    window.addEventListener('setRoadmap', handleClose);
+    return () => window.removeEventListener('setRoadmap', handleClose);
+  }, []);
+
   const features = [
     { 
       id: 'tools',

@@ -2,11 +2,23 @@ import React from 'react';
 
 const OrientationDetail = () => {
   const sectors = [
-    { title: 'Web & Mobile', focus: 'Visuel et Interaction', icons: '📱💻', link: '#skills-section' },
-    { title: 'Cybersécurité', focus: 'Protection et Analyse', icons: '🛡️🕵️', link: '#skills-section' },
-    { title: 'Data / IA', focus: 'Statistiques et Algorithmes', icons: '📊🤖', link: '#skills-section' },
-    { title: 'Cloud / DevOps', focus: 'Infrastructure et Automatisation', icons: '☁️⚙️', link: '#skills-section' }
+    { id: 'dev', title: 'Web & Mobile', focus: 'Visuel et Interaction', icons: '📱💻' },
+    { id: 'cyber', title: 'Cybersécurité', focus: 'Protection et Analyse', icons: '🛡️🕵️' },
+    { id: 'ia', title: 'Data / IA', focus: 'Statistiques et Algorithmes', icons: '📊🤖' },
+    { id: 'devops', title: 'Cloud / DevOps', focus: 'Infrastructure et Automatisation', icons: '☁️⚙️' }
   ];
+
+  const handleSectorClick = (id) => {
+    // 1. Déclencher l'événement personnalisé pour changer l'onglet dans Roadmaps
+    const event = new CustomEvent('setRoadmap', { detail: id });
+    window.dispatchEvent(event);
+
+    // 2. Faire défiler jusqu'à la section Roadmaps
+    const element = document.getElementById('skills-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div style={{ textAlign: 'left' }}>
@@ -15,16 +27,10 @@ const OrientationDetail = () => {
       </p>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
         {sectors.map((s, i) => (
-          <a 
-            key={i} 
-            href={s.link} 
-            style={{ textDecoration: 'none' }}
-            onClick={(e) => {
-              // Si c'est un lien interne, on peut fermer la modal (géré par le parent via event bubbling ou callback)
-              // Pour l'instant on laisse le comportement par défaut
-            }}
-          >
-            <div style={{
+          <div
+            key={i}
+            onClick={() => handleSectorClick(s.id)}
+            style={{
               padding: '15px',
               background: '#f1f3f5',
               borderRadius: '15px',
@@ -44,16 +50,15 @@ const OrientationDetail = () => {
               e.currentTarget.style.borderColor = 'transparent';
               e.currentTarget.style.transform = 'translateY(0)';
             }}
-            >
-              <div style={{ fontSize: '1.5rem', marginBottom: '5px' }}>{s.icons}</div>
-              <div style={{ fontWeight: '800', color: '#000', fontSize: '0.9rem' }}>{s.title}</div>
-              <div style={{ fontSize: '0.75rem', color: '#666' }}>{s.focus}</div>
-            </div>
-          </a>
+          >
+            <div style={{ fontSize: '1.5rem', marginBottom: '5px' }}>{s.icons}</div>
+            <div style={{ fontWeight: '800', color: '#000', fontSize: '0.9rem' }}>{s.title}</div>
+            <div style={{ fontSize: '0.75rem', color: '#666' }}>{s.focus}</div>
+          </div>
         ))}
       </div>
       <p style={{ marginTop: '20px', fontSize: '0.9rem', fontStyle: 'italic', color: '#888', textAlign: 'center' }}>
-        Cliquez sur un domaine pour voir sa Roadmap dédiée.
+        Cliquez sur un domaine pour ouvrir sa Roadmap dédiée directement.
       </p>
     </div>
   );
