@@ -83,7 +83,7 @@ const About = () => {
                 borderLeft: '5px solid #ffbd39',
                 textAlign: 'left'
               }}>
-                <h4 style={{ fontWeight: '800', marginBottom: '12px', fontSize: '1rem' }}>{t('about.goal.title')}</h4>
+                <h4 style={{ fontWeight: '800', marginBottom: '12px', fontSize: '1rem', color: '#000' }}>{t('about.goal.title')}</h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   {[1, 2, 3].map((num) => (
                     <li key={num} style={{
