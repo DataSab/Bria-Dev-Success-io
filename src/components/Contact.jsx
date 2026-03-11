@@ -57,7 +57,7 @@ const Contact = () => {
         
         <div className="d-flex justify-content-center">
           <a 
-            href="mailto:vitoranda@outlook.com" 
+            href="mailto:briadev@proton.me" 
             className="btn shadow-lg"
             style={{ 
               background: 'linear-gradient(135deg, #ffbd39 0%, #ffd662 100%)',
