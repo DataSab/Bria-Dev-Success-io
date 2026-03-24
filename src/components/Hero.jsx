@@ -29,7 +29,7 @@ const Hero = () => {
     });
 
     const handleTimeUpdate = () => {
-      if (video.currentTime >= 30) {
+      if (video.currentTime >= 26) {
         video.currentTime = 0;
         video.play().catch(() => {});
       }
