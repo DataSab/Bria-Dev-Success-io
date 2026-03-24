@@ -7,78 +7,6 @@ const Events = () => {
 
   const events = [
     {
-      date: '15 Mars 2026',
-      endDate: '17 Mars 2026',
-      title: 'SALON TECH FOR GOOD - PARIS',
-      description: 'Le plus grand salon européen dédié aux technologies et à la reconversion professionnelle dans l\'IT.',
-      location: 'Paris Expo Porte de Versailles',
-      type: 'Salon',
-      category: 'Salon',
-      icon: '🎪',
-      link: '#',
-      isExternal: false
-    },
-    {
-      date: '22 Mars 2026',
-      time: '14h00 - 16h00',
-      title: 'WEBINAIRE : SE RECONVERTIR EN DÉVELOPPEUR WEB',
-      description: 'Session live avec Q&A pour découvrir les étapes clés d\'une reconversion réussie en développement web.',
-      location: 'En ligne (Zoom)',
-      type: 'Webinaire',
-      category: 'Webinaire',
-      icon: '💻',
-      link: '#',
-      isExternal: false
-    },
-    {
-      date: '5 Avril 2026',
-      time: '10h00 - 18h00',
-      title: 'FORUM EMPLOI IT & DIGITAL',
-      description: 'Rencontrez plus de 100 recruteurs et entreprises tech à la recherche de profils juniors et reconversions.',
-      location: 'Lyon Convention Center',
-      type: 'Emploi',
-      category: 'Emploi',
-      icon: '💼',
-      link: '#',
-      isExternal: false
-    },
-    {
-      date: '12 Avril 2026',
-      time: '18h30 - 20h30',
-      title: 'MEETUP RECONVERSION TECH - BORDEAUX',
-      description: 'Rencontre informelle entre personnes en reconversion IT. Partage d\'expériences, networking et conseils.',
-      location: 'Le Wagon Bordeaux',
-      type: 'Rencontre',
-      category: 'Formation',
-      icon: '🤝',
-      link: '#',
-      isExternal: false
-    },
-    {
-      date: '18 Avril 2026',
-      time: '14h00 - 15h30',
-      title: 'WEBINAIRE : CYBERSÉCURITÉ POUR DÉBUTANTS',
-      description: 'Introduction à la cybersécurité : métiers, compétences requises et parcours de formation.',
-      location: 'En ligne (Google Meet)',
-      type: 'Webinaire',
-      category: 'Webinaire',
-      icon: '🔒',
-      link: '#',
-      isExternal: false
-    },
-    {
-      date: '25 Avril 2026',
-      endDate: '26 Avril 2026',
-      title: 'HACKATHON JUNIOR FRIENDLY',
-      description: '48h pour coder un projet en équipe. Ouvert aux débutants et personnes en reconversion !',
-      location: 'Station F, Paris',
-      type: 'Formation',
-      category: 'Formation',
-      icon: '🚀',
-      link: '#',
-      isExternal: false
-    },
-    {
       date: '15 Avril 2026',
       endDate: '16 Avril 2026',
       title: 'PARIS BLOCKCHAIN WEEK',
@@ -184,18 +112,6 @@ const Events = () => {
       link: 'https://vivatechnology.com',
       isExternal: true
     },
-    {
-      date: '30 Juin 2026',
-      endDate: '1er Juillet 2026',
-      title: 'SALON SOUVERAINETÉ NUMÉRIQUE',
-      description: 'Rendez-vous politique et technique sur l\'indépendance numérique européenne.',
-      location: 'Paris',
-      type: 'Salon',
-      category: 'Salon',
-      icon: '🏛️',
-      link: 'https://www.salonsouverainenumerique.fr',
-      isExternal: true
-    }
   ];
 
   const categories = ['Tous', 'Salon', 'Webinaire', 'Formation', 'Emploi'];
