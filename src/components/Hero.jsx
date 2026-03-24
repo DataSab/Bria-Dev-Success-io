@@ -91,7 +91,7 @@ const Hero = () => {
 
         <span className="subheading" style={{
           color: '#ffbd39',
-          fontSize: 'clamp(0.85rem, 3vw, 1.1rem)',
+          fontSize: 'clamp(1.6rem, 4.5vw, 3rem)',
           fontWeight: '800',
           letterSpacing: '3px',
           display: 'block',
@@ -113,29 +113,33 @@ const Hero = () => {
           {text}
         </h1>
 
-        <blockquote style={{
-          fontSize: 'clamp(0.75rem, 2.5vw, 0.95rem)',
-          fontStyle: 'italic',
-          color: 'rgba(255,255,255,0.75)',
-          marginBottom: '1.2rem',
-          lineHeight: '1.5',
-          borderLeft: 'none',
-          padding: '0',
-          maxWidth: '680px',
-          margin: '0 auto 1.2rem',
-        }}>
-          {t('hero.quote')}
-        </blockquote>
-
         <p className="lead text-white" style={{
           fontSize: 'clamp(0.85rem, 2.5vw, 1.05rem)',
           lineHeight: '1.6',
           opacity: 0.9,
           maxWidth: '640px',
-          margin: '0 auto 2rem',
+          margin: '0 auto 1.6rem',
         }}>
           {t('hero.welcome')}
         </p>
+
+        <blockquote style={{
+          fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
+          fontStyle: 'italic',
+          color: '#fff',
+          lineHeight: '1.7',
+          borderLeft: 'none',
+          maxWidth: '640px',
+          margin: '0 auto 2rem',
+          padding: '1rem 1.5rem',
+          background: 'rgba(0, 105, 148, 0.35)',
+          borderRadius: '12px',
+          backdropFilter: 'blur(4px)',
+          borderTop: '1px solid rgba(255,255,255,0.15)',
+          borderBottom: '1px solid rgba(255,255,255,0.15)',
+        }}>
+          {t('hero.quote')}
+        </blockquote>
 
         <div className="hero-buttons" style={{
           display: 'flex',
