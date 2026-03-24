@@ -15,11 +15,23 @@ html, body {
 /* Tablet: 769px - 1024px */
 /* Desktop: 1025px+ */
 
-/* ===== DESKTOP HERO ALIGNMENT ===== */
-@media (min-width: 992px) {
-  .hero-buttons {
-    justify-content: flex-start !important;
-  }
+/* ===== HERO ALIGNMENT — centré sur tous les supports ===== */
+.hero-buttons {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+#home-section .container {
+  text-align: center !important;
+}
+
+#home-section h1,
+#home-section .subheading,
+#home-section blockquote,
+#home-section p.lead {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /* ===== HERO SECTION RESPONSIVE ===== */
