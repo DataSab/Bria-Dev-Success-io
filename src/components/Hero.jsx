@@ -20,12 +20,23 @@ const Hero = () => {
   }, [fullText]);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.70;
-      videoRef.current.play().catch(err => {
-        console.log("Autoplay prevented or video error:", err);
-      });
-    }
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.playbackRate = 0.70;
+    video.play().catch(err => {
+      console.log("Autoplay prevented or video error:", err);
+    });
+
+    const handleTimeUpdate = () => {
+      if (video.currentTime >= 30) {
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      }
+    };
+
+    video.addEventListener('timeupdate', handleTimeUpdate);
+    return () => video.removeEventListener('timeupdate', handleTimeUpdate);
   }, []);
 
   return (
@@ -133,7 +144,7 @@ const Hero = () => {
           {/* Colonne Vidéo */}
           <div className="col-lg-7 text-center">
             <div className="hero-video-player" style={{
-              maxWidth: '100%',
+              maxWidth: '640px',
               width: '100%',
               margin: '0 auto',
               borderRadius: '20px',
@@ -149,7 +160,6 @@ const Hero = () => {
               <video
                 ref={videoRef}
                 autoPlay
-                loop
                 muted
                 playsInline
                 controls
