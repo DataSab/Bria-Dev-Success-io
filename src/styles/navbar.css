@@ -91,7 +91,7 @@
 .toggler-icon {
   width: 25px; /* Larger icon lines */
   height: 3px;
-  background: #ffbd39;
+  background: #000000;
   border-radius: 3px;
   transition: all 0.3s ease;
 }
