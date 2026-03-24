@@ -128,7 +128,7 @@ const Hero = () => {
         </h1>
 
         <p className="lead text-white" style={{
-          fontSize: 'clamp(0.85rem, 2.5vw, 1.05rem)',
+          fontSize: 'clamp(1rem, 2.8vw, 1.3rem)',
           lineHeight: '1.6',
           opacity: 0.9,
           maxWidth: '640px',
