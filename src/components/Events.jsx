@@ -114,6 +114,93 @@ const Events = () => {
     },
   ];
 
+  const jobBoards = [
+    {
+      title: 'FRANCE TRAVAIL',
+      description: 'Le service public de l\'emploi. Offres CDI, CDD, alternance dans le digital partout en France.',
+      icon: '🇫🇷',
+      link: 'https://www.francetravail.fr/accueil/',
+      tag: 'Offres en continu'
+    },
+    {
+      title: 'INDEED',
+      description: 'Le moteur de recherche d\'emploi mondial. Filtre par "développeur", "data", "cybersécurité"...',
+      icon: '🔍',
+      link: 'https://fr.indeed.com',
+      tag: 'Offres en continu'
+    },
+    {
+      title: 'WELCOME TO THE JUNGLE',
+      description: 'La référence pour les profils tech. Culture d\'entreprise, salaires et offres IT en transparence.',
+      icon: '🌿',
+      link: 'https://www.welcometothejungle.com/fr/jobs?refinementList%5Bjob.contract_type_names.fr%5D%5B%5D=CDI&query=digital',
+      tag: 'Tech & startups'
+    },
+    {
+      title: 'LINKEDIN JOBS',
+      description: 'Le réseau professionnel numéro 1 pour décrocher un poste dans la tech et se faire repérer par les recruteurs.',
+      icon: '💼',
+      link: 'https://www.linkedin.com/jobs/search/?keywords=digital%20IT',
+      tag: 'Réseau pro'
+    },
+    {
+      title: 'TALENT.IO',
+      description: 'Plateforme tech-only : développeurs, data scientists, DevOps. Les entreprises viennent à vous.',
+      icon: '🎯',
+      link: 'https://www.talent.io/p/fr-fr/jobs',
+      tag: 'Tech uniquement'
+    },
+    {
+      title: 'APEC',
+      description: 'Pour les profils cadres et reconversions IT. Offres qualifiées et accompagnement personnalisé.',
+      icon: '📋',
+      link: 'https://www.apec.fr/candidat/recherche-emploi.html/emploi?motsCles=informatique',
+      tag: 'Cadres & experts'
+    },
+    {
+      title: 'MALT',
+      description: 'La plateforme freelance numéro 1 en France. Idéal pour les développeurs, designers et consultants IT indépendants.',
+      icon: '🚀',
+      link: 'https://www.malt.fr',
+      tag: 'Freelance'
+    },
+    {
+      title: 'COMET',
+      description: 'Missions freelance pour profils tech séniors : développeurs, data, cloud, cybersécurité.',
+      icon: '☄️',
+      link: 'https://www.comet.co',
+      tag: 'Freelance IT'
+    },
+    {
+      title: 'GLASSDOOR',
+      description: 'Offres d\'emploi + avis salariés + salaires réels. Comparez les entreprises avant de postuler.',
+      icon: '🔎',
+      link: 'https://www.glassdoor.fr/Emploi/informatique-offres-emploi-SRCH_KO0,12.htm',
+      tag: 'Avis & salaires'
+    },
+    {
+      title: 'JOBTEASER',
+      description: 'Orienté étudiants et jeunes diplômés. Stages, alternances et premiers emplois en tech.',
+      icon: '🎓',
+      link: 'https://www.jobteaser.com/fr/job-offers?keywords=informatique',
+      tag: 'Juniors & alternance'
+    },
+    {
+      title: 'CADREMPLOI',
+      description: 'Offres cadres dans l\'IT, la data et le digital. Fiches salaires et conseils carrière inclus.',
+      icon: '📊',
+      link: 'https://www.cadremploi.fr/emploi/liste_offres.html?kw=informatique',
+      tag: 'Cadres'
+    },
+    {
+      title: 'REGIONSJOB / HELLOWORK',
+      description: 'Offres d\'emploi IT par région. Parfait pour trouver des postes tech près de chez vous.',
+      icon: '📍',
+      link: 'https://www.hellowork.com/fr-fr/emploi/recherche.html?k=informatique',
+      tag: 'Par région'
+    },
+  ];
+
   const categories = ['Tous', 'Salon', 'Webinaire', 'Formation', 'Emploi'];
   const filteredEvents = filter === 'Tous' ? events : events.filter(e => e.category === filter);
 
@@ -190,7 +277,87 @@ const Events = () => {
           </div>
         </div>
 
+        {/* Job Boards Grid — affiché uniquement si filtre Emploi */}
+        {filter === 'Emploi' && (
+          <>
+            <p style={{ textAlign: 'center', color: '#cbd5e1', marginBottom: '30px', fontSize: '1rem' }}>
+              Toutes les plateformes pour trouver un emploi ou une mission dans le digital 🎯
+            </p>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '24px',
+              maxWidth: '1100px',
+              margin: '0 auto'
+            }}>
+              {jobBoards.map((board, index) => (
+                <a
+                  key={index}
+                  href={board.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.95) 100%)',
+                    borderRadius: '18px',
+                    padding: '24px',
+                    boxShadow: '0 8px 30px rgba(0,0,0,0.25)',
+                    border: '1px solid rgba(255,189,57,0.3)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    textDecoration: 'none',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '10px',
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-8px)';
+                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(255,189,57,0.3)';
+                    e.currentTarget.style.borderColor = '#ffbd39';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 8px 30px rgba(0,0,0,0.25)';
+                    e.currentTarget.style.borderColor = 'rgba(255,189,57,0.3)';
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <span style={{ fontSize: '2rem' }}>{board.icon}</span>
+                    <span style={{ fontWeight: '800', fontSize: '1rem', color: '#1e293b' }}>{board.title}</span>
+                  </div>
+                  <span style={{
+                    fontSize: '0.75rem',
+                    fontWeight: '700',
+                    color: '#ffbd39',
+                    background: 'rgba(255,189,57,0.12)',
+                    padding: '3px 10px',
+                    borderRadius: '20px',
+                    alignSelf: 'flex-start'
+                  }}>{board.tag}</span>
+                  <p style={{ color: '#64748b', fontSize: '0.88rem', lineHeight: '1.5', margin: 0 }}>
+                    {board.description}
+                  </p>
+                  <span style={{
+                    marginTop: '6px',
+                    display: 'inline-block',
+                    background: '#1e293b',
+                    color: '#fff',
+                    fontSize: '0.8rem',
+                    fontWeight: '700',
+                    padding: '8px 20px',
+                    borderRadius: '20px',
+                    alignSelf: 'flex-start',
+                    letterSpacing: '0.5px'
+                  }}>
+                    Accéder →
+                  </span>
+                </a>
+              ))}
+            </div>
+          </>
+        )}
+
         {/* Events Grid */}
+        {filter !== 'Emploi' && (
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
@@ -335,6 +502,7 @@ const Events = () => {
             </div>
           ))}
         </div>
+        )}
 
         {/* Call to action */}
         <div style={{
