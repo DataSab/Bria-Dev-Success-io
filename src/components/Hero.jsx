@@ -7,9 +7,9 @@ const Hero = () => {
   const [text, setText] = useState('');
   const videoRef = useRef(null);
   const fullText = t('hero.title');
-  
+
   useEffect(() => {
-    setText(''); // Reset text when language changes
+    setText('');
     let i = 0;
     const interval = setInterval(() => {
       setText(fullText.slice(0, i));
@@ -40,142 +40,149 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home-section" className="hero-wrap animated-bg" style={{
+    <section id="home-section" className="hero-wrap" style={{
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       position: 'relative',
       overflow: 'hidden',
-      paddingTop: '100px', 
-      paddingBottom: '20px',
-      paddingLeft: '15px',
-      paddingRight: '15px'
+      background: '#01161e', /* fallback si vidéo non chargée */
     }}>
+
+      {/* ── Vidéo fond plein écran ── */}
+      <video
+        ref={videoRef}
+        autoPlay
+        muted
+        playsInline
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: 0,
+        }}
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
+
+      {/* ── Overlay bleu lagon ── */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'linear-gradient(160deg, rgba(1,22,30,0.82) 0%, rgba(1,42,74,0.75) 40%, rgba(0,105,148,0.65) 70%, rgba(1,22,30,0.85) 100%)',
+        zIndex: 1,
+      }} />
+
+      {/* ── Particules code flottant ── */}
       <ParticlesBackground />
 
-      <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1400px' }}>
-        <div className="row align-items-center justify-content-center">
-          {/* Colonne Texte */}
-          <div className="col-lg-5 text-center text-lg-start mb-3 mb-lg-0">
-            <span className="subheading" style={{
-              color: '#ffbd39',
-              fontSize: 'clamp(0.8rem, 3.5vw, 1.2rem)',
-              fontWeight: '800',
-              letterSpacing: '2px',
-              display: 'block',
-              marginBottom: '0.5rem',
-              textShadow: '2px 2px 10px rgba(0,0,0,0.8)'
-            }}>{t('hero.subtitle')}</span>
+      {/* ── Contenu centré ── */}
+      <div className="container" style={{
+        position: 'relative',
+        zIndex: 3,
+        maxWidth: '860px',
+        textAlign: 'center',
+        padding: '120px 20px 60px',
+      }}>
 
-            <h1 className="mb-2" style={{
-              color: '#fff',
-              fontSize: 'clamp(1.2rem, 6vw, 2.8rem)',
-              fontWeight: '900',
-              textShadow: '0 0 20px rgba(0,0,0,0.8)',
-              lineHeight: '1.1'
-            }}>
-              {text}
-            </h1>
+        <span className="subheading" style={{
+          color: '#ffbd39',
+          fontSize: 'clamp(0.85rem, 3vw, 1.1rem)',
+          fontWeight: '800',
+          letterSpacing: '3px',
+          display: 'block',
+          marginBottom: '1rem',
+          textShadow: '0 0 20px rgba(0,0,0,0.8)',
+          textTransform: 'uppercase',
+        }}>
+          {t('hero.subtitle')}
+        </span>
 
-            <blockquote style={{
-              fontSize: 'clamp(0.7rem, 3vw, 0.9rem)',
-              fontStyle: 'italic',
-              color: 'rgba(255,255,255,0.7)',
-              marginBottom: '1rem',
-              lineHeight: '1.3',
-              borderLeft: 'none',
-              padding: '0'
-            }}>
-              {t('hero.quote')}
-            </blockquote>
+        <h1 style={{
+          color: '#fff',
+          fontSize: 'clamp(1.6rem, 5vw, 3.2rem)',
+          fontWeight: '900',
+          textShadow: '0 4px 30px rgba(0,0,0,0.9)',
+          lineHeight: '1.15',
+          marginBottom: '1.2rem',
+        }}>
+          {text}
+        </h1>
 
-            <p className="lead text-white mb-3" style={{
-              fontSize: 'clamp(0.8rem, 3.5vw, 1rem)',
-              lineHeight: '1.4',
-              opacity: 0.9,
-              maxWidth: '600px',
-              margin: '0 0 1rem 0'
-            }}>
-              {t('hero.welcome')}
-            </p>
+        <blockquote style={{
+          fontSize: 'clamp(0.75rem, 2.5vw, 0.95rem)',
+          fontStyle: 'italic',
+          color: 'rgba(255,255,255,0.75)',
+          marginBottom: '1.2rem',
+          lineHeight: '1.5',
+          borderLeft: 'none',
+          padding: '0',
+          maxWidth: '680px',
+          margin: '0 auto 1.2rem',
+        }}>
+          {t('hero.quote')}
+        </blockquote>
 
-            <div className="hero-buttons" style={{
-              display: 'flex',
-              gap: '0.6rem',
-              flexWrap: 'wrap'
-            }}>
-              <a href="#about-section" className="btn btn-primary" style={{
-                borderRadius: '50px',
-                fontWeight: '700',
-                padding: '10px 20px',
-                fontSize: '0.75rem',
-                background: '#fff',
-                color: '#000',
-                border: '2px solid #fff',
-                transition: 'all 0.3s ease',
-                textDecoration: 'none',
-                minWidth: '150px',
-                textTransform: 'uppercase',
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}>{t('hero.btn.about')}</a>
-              
-              <a href="#skills-section" className="btn btn-outline-white" style={{
-                borderRadius: '50px',
-                fontWeight: '700',
-                padding: '10px 20px',
-                fontSize: '0.75rem',
-                background: '#ffbd39',
-                color: '#000',
-                border: '2px solid #ffbd39',
-                transition: 'all 0.3s ease',
-                textDecoration: 'none',
-                minWidth: '150px',
-                textTransform: 'uppercase',
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}>{t('hero.btn.roadmaps')}</a>
-            </div>
-          </div>
+        <p className="lead text-white" style={{
+          fontSize: 'clamp(0.85rem, 2.5vw, 1.05rem)',
+          lineHeight: '1.6',
+          opacity: 0.9,
+          maxWidth: '640px',
+          margin: '0 auto 2rem',
+        }}>
+          {t('hero.welcome')}
+        </p>
 
-          {/* Colonne Vidéo */}
-          <div className="col-lg-7 text-center">
-            <div className="hero-video-player" style={{
-              maxWidth: '640px',
-              width: '100%',
-              margin: '0 auto',
-              borderRadius: '20px',
-              overflow: 'hidden',
-              boxShadow: '0 20px 60px rgba(255, 189, 57, 0.3), 0 10px 30px rgba(0,0,0,0.7)',
-              border: '3px solid #ffbd39',
-              background: '#000',
-              position: 'relative',
-              zIndex: 100,
-              cursor: 'pointer',
-              transition: 'all 0.3s ease'
-            }}>
-              <video
-                ref={videoRef}
-                autoPlay
-                muted
-                playsInline
-                controls
-                poster="/images/photo-style-cartoon-3x.jpeg"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  display: 'block'
-                }}
-              >
-                <source src="/hero-video.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
+        <div className="hero-buttons" style={{
+          display: 'flex',
+          gap: '0.8rem',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+        }}>
+          <a href="#about-section" style={{
+            borderRadius: '50px',
+            fontWeight: '700',
+            padding: '12px 28px',
+            fontSize: '0.8rem',
+            background: '#fff',
+            color: '#000',
+            border: '2px solid #fff',
+            transition: 'all 0.3s ease',
+            textDecoration: 'none',
+            textTransform: 'uppercase',
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            letterSpacing: '1px',
+          }}>
+            {t('hero.btn.about')}
+          </a>
+
+          <a href="#skills-section" style={{
+            borderRadius: '50px',
+            fontWeight: '700',
+            padding: '12px 28px',
+            fontSize: '0.8rem',
+            background: '#ffbd39',
+            color: '#000',
+            border: '2px solid #ffbd39',
+            transition: 'all 0.3s ease',
+            textDecoration: 'none',
+            textTransform: 'uppercase',
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            letterSpacing: '1px',
+          }}>
+            {t('hero.btn.roadmaps')}
+          </a>
         </div>
       </div>
+
     </section>
   );
 };
