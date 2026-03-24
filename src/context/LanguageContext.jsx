@@ -12,7 +12,7 @@ const translations = {
 
   // Hero Section
   'hero.title': 'Envisager sa reconversion dans l’informatique',
-  'hero.subtitle': 'BRIA DEV SUCCESS (BDV) 👋',
+  'hero.subtitle': 'BRIA DEV SUCCESS (BDS) 👋',
   'hero.quote': '« Votre temps est limité, ne le gâchez pas en menant une existence qui n’est pas la vôtre. » — Steve Jobs',
   'hero.welcome': "Se reconvertir dans l’IT est un défi passionnant, mais il est facile de se perdre. J'ai créé cet espace pour vous aider à y voir plus clair et à avancer sereinement.",
   'hero.btn.about': 'Découvrir mon parcours',
