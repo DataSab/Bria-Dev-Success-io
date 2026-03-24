@@ -87,7 +87,7 @@ const Events = () => {
     <section id="events-section" style={{
       padding: '100px 0',
       scrollMarginTop: '100px',
-      background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
+      background: 'linear-gradient(-45deg, #01161e, #012a4a, #006994, #01497c, #013a63, #01161e)',
       position: 'relative'
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>

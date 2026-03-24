@@ -55,9 +55,9 @@ const ConseilCard = ({ conseil, index }) => {
       onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
       >
         <div className="icon-wrap mb-4" style={{ 
-          fontSize: '40px', 
-          color: '#ffbd39',
-          background: 'rgba(255, 189, 57, 0.12)',
+          fontSize: '40px',
+          color: '#ffffff',
+          background: 'linear-gradient(135deg, #006994 0%, #012a4a 100%)',
           width: '85px',
           height: '85px',
           borderRadius: '50%',
@@ -65,7 +65,7 @@ const ConseilCard = ({ conseil, index }) => {
           alignItems: 'center',
           justifyContent: 'center',
           margin: '0 0 20px 0',
-          boxShadow: '0 5px 15px rgba(255,189,57,0.2)'
+          boxShadow: '0 5px 15px rgba(0, 105, 148, 0.4)'
         }}>
           <span className={conseil.icon}></span>
         </div>
