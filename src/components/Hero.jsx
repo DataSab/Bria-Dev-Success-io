@@ -89,6 +89,20 @@ const Hero = () => {
         padding: '120px 20px 60px',
       }}>
 
+        <img
+          src="/images/logo-briadev.png"
+          alt="Bria Dev Success Logo"
+          style={{
+            height: 'clamp(60px, 10vw, 90px)',
+            width: 'auto',
+            marginBottom: '1rem',
+            display: 'block',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            filter: 'drop-shadow(0 0 18px rgba(0,105,148,0.6))',
+          }}
+        />
+
         <span className="subheading" style={{
           color: '#ffbd39',
           fontSize: 'clamp(1.6rem, 4.5vw, 3rem)',
