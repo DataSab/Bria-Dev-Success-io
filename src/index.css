@@ -259,7 +259,7 @@ p {
 }
 
 .animated-bg {
-    background: linear-gradient(-45deg, #0a0a0a, #1a1a2e, #16213e, #1a1a2e) !important;
+    background: linear-gradient(-45deg, #01161e, #012a4a, #006994, #01497c, #013a63, #01161e) !important;
     background-size: 400% 400% !important;
     animation: gradientBG 15s ease infinite !important;
 }

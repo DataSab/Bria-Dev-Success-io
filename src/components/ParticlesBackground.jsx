@@ -47,7 +47,7 @@ const ParticlesBackground = () => {
         this.directionY = (Math.random() - 0.5) * 0.5;
         this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
         this.fontSize = Math.random() * 5 + 9; // 9–14px
-        this.baseOpacity = Math.random() * 0.35 + 0.12;
+        this.baseOpacity = Math.random() * 0.4 + 0.35;
         this.opacity = this.baseOpacity;
         this.pulseSpeed = Math.random() * 0.008 + 0.003;
         this.pulsePhase = Math.random() * Math.PI * 2;
@@ -55,7 +55,7 @@ const ParticlesBackground = () => {
 
       draw() {
         ctx.font = `${this.fontSize}px 'Courier New', Courier, monospace`;
-        ctx.fillStyle = `rgba(255, 189, 57, ${this.opacity})`;
+        ctx.fillStyle = `rgba(0, 255, 200, ${this.opacity})`;
         ctx.fillText(this.symbol, this.x, this.y);
       }
 
@@ -103,7 +103,7 @@ const ParticlesBackground = () => {
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < maxDist) {
             const op = (1 - dist / maxDist) * 0.25;
-            ctx.strokeStyle = `rgba(255, 189, 57, ${op})`;
+            ctx.strokeStyle = `rgba(0, 255, 200, ${op})`;
             ctx.lineWidth = 0.7;
             ctx.beginPath();
             ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
