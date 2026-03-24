@@ -50,7 +50,7 @@ dist/
 build/
 
 # ========================================
-# FICHIERS PERSONNELS ET DOCUMENTATION PRIVÉE
+# FICHIERS DOCUMENTATION
 # ========================================
 Docs/
 GUIDE-APPRENTISSAGE.md
@@ -63,7 +63,7 @@ prepros-6.config
 prepros.config
 
 # ========================================
-# FICHIERS DE DÉMO ET TEST
+# FICHIERS DE DEMO ET TESTS
 # ========================================
 demo-*.html
 *-demo.html
@@ -86,7 +86,7 @@ test-*.html
 *.orig
 
 # ========================================
-# FICHIERS SENSIBLES (CLÉS, SECRETS, etc.)
+# FICHIERS SENSIBLES ET DE CONFIGURATION
 # ========================================
 .env
 .env.*
@@ -98,7 +98,7 @@ credentials.json
 config.local.json
 
 # ========================================
-# AUTRES FICHIERS À EXCLURE
+# AUTRES FICHIERS TEMPORAIRES
 # ========================================
 # Fichiers temporaires
 *.tmp
@@ -109,7 +109,7 @@ config.local.json
 google*.html
 
 # ========================================
-# ANCIENS FICHIERS DE L'ANCIEN SITE STATIQUE (À CACHER)
+# ANCIENS FICHIERS
 # ========================================
 # Anciens dossiers CSS/JS/Images (remplacés par src/ et public/)
 css/
@@ -121,7 +121,7 @@ fonts/
 favicon.png
 
 # ========================================
-# FICHIERS DE DOCUMENTATION TECHNIQUE (À CACHER)
+# FICHIERS DE DOCUMENTATION TECHNIQUE
 # ========================================
 DEPLOYMENT_OVH.md
 MIGRATION_GUIDE.md
@@ -135,7 +135,7 @@ deploy.md
 dist/
 
 # ========================================
-# FLUTTER / DART / MOBILE (NON UTILISÉ - PROJET WEB UNIQUEMENT)
+# FLUTTER / DART / MOBILE (PROJET WEB UNIQUEMENT)
 # ========================================
 .dart_tool/
 .flutter-plugins
@@ -148,3 +148,10 @@ ios/
 # DOSSIERS DE BACKUP
 # ========================================
 Bria-Dev.io-backup/
+
+
+========================================
+# FICHIERS DE PRÉSENTATION ET VIDÉOS
+========================================
+pres.mp4
+
