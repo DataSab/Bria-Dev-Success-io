@@ -173,7 +173,7 @@
   }
 }
 
-/* Orientation Landscape Fix for Mobile */
+/* Orientation Landscape for Mobile */
 @media (max-height: 500px) and (orientation: landscape) {
   .navbar-collapse {
     padding-top: 70px;
