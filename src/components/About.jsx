@@ -8,7 +8,7 @@ const About = () => {
   const [imgRef, imgStyle] = useScrollReveal({ delay: 0.2, distance: '50px' });
   const [textRef, textStyle] = useScrollReveal({ delay: 0.4 });
 
-  // Gestion dynamique de la largeur (Optionnel si vous n'utilisez pas de CSS externe)
+  // Gestion dynamique de la largeur (Optionnel si pas de CSS externe)
   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 768 : false);
 
   useEffect(() => {
