@@ -104,13 +104,13 @@ const Hero = () => {
         />
 
         <span className="subheading" style={{
-          color: '#FFA500',
+          color: '#00d4ff', /* Bleu cyan vif pour le contraste avec l'orange */
           fontSize: 'clamp(1.6rem, 4.5vw, 3rem)',
           fontWeight: '800',
           letterSpacing: '3px',
           display: 'block',
           marginBottom: '1rem',
-          textShadow: '0 0 20px rgba(0,0,0,0.8)',
+          textShadow: '0 0 20px rgba(0,212,255,0.4)',
           textTransform: 'uppercase',
         }}>
           {t('hero.subtitle')}
@@ -146,11 +146,11 @@ const Hero = () => {
           maxWidth: '640px',
           margin: '0 auto 2rem',
           padding: '1rem 1.5rem',
-          background: 'rgba(0, 105, 148, 0.35)',
+          background: 'rgba(0, 165, 255, 0.2)', /* Bleu plus marqué */
           borderRadius: '12px',
           backdropFilter: 'blur(4px)',
-          borderTop: '1px solid rgba(255,255,255,0.15)',
-          borderBottom: '1px solid rgba(255,255,255,0.15)',
+          borderTop: '1px solid rgba(0, 212, 255, 0.3)',
+          borderBottom: '1px solid rgba(0, 212, 255, 0.3)',
         }}>
           {t('hero.quote')}
         </blockquote>

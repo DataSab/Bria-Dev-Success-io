@@ -144,7 +144,7 @@ p {
 .hero-main-title {
 	font-size: 2.5rem;
 	font-weight: 800;
-	background: linear-gradient(90deg, #ffffff, #fff9e6, #FFA500 , #fff9e6, #ffffff);
+	background: linear-gradient(90deg, #ffffff, #e6f7ff, #FFA500 , #e6f7ff, #ffffff);
 	background-size: 200% 100%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -185,7 +185,7 @@ p {
 	font-size: 1.2rem !important; /* Réduit de 1.4rem */
 	font-weight: 600;
 	margin-bottom: 0.6rem;
-	background: linear-gradient(45deg, #fff, #FFA500);
+	background: linear-gradient(45deg, #00d4ff, #FFA500);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -283,7 +283,7 @@ p {
 
 .hero-video-player:hover {
     transform: scale(1.02);
-    box-shadow: 0 25px 70px rgba(244, 222, 97, 0.4), 0 15px 40px rgba(0,0,0,0.8) !important;
+    box-shadow: 0 25px 70px rgba(255, 165, 0, 0.4), 0 15px 40px rgba(0,0,0,0.8) !important;
 }
 
 .hero-video-player video {
