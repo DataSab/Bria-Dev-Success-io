@@ -65,8 +65,8 @@ const Projects = () => {
                 style={{
                   padding: '8px 20px',
                   borderRadius: '25px',
-                  border: filter === cat ? 'none' : '2px solid #ffbd39',
-                  background: filter === cat ? '#ffbd39' : 'transparent',
+                  border: filter === cat ? 'none' : '2px solid #FFEE8C',
+                  background: filter === cat ? '#FFEE8C' : 'transparent',
                   color: filter === cat ? '#000' : '#1e293b',
                   fontWeight: '700',
                   cursor: 'pointer',
@@ -103,7 +103,7 @@ const Projects = () => {
               }}
               onMouseOver={(e) => {
                 e.currentTarget.style.transform = 'translateY(-10px) scale(1.02)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(255, 189, 57, 0.15)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(255, 238, 140, 0.15)';
               }}
               onMouseOut={(e) => {
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
@@ -114,7 +114,7 @@ const Projects = () => {
                 <img src={article.image} alt={article.title} style={{ width: '100%', height: '180px', objectFit: 'cover' }} />
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
-                <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#ffbd39' }}>{article.category}</span>
+                <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#FFEE8C' }}>{article.category}</span>
                 <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>{article.date}</span>
               </div>
               <h3 style={{ fontWeight: '800', fontSize: '1.2rem', color: '#1e293b', marginBottom: '15px', lineHeight: '1.3' }}>

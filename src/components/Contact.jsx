@@ -42,11 +42,11 @@ const Contact = () => {
         <div className="icon" style={{ 
           width: '80px',
           height: '80px',
-          background: 'linear-gradient(135deg, #ffbd39 0%, #ffd662 100%)',
+          background: 'linear-gradient(135deg, #FFEE8C 0%, #ffd662 100%)',
           borderRadius: '50%',
           fontSize: '30px', 
           color: '#fff',
-          boxShadow: '0 8px 25px rgba(255, 189, 57, 0.3)',
+          boxShadow: '0 8px 25px rgba(255, 238, 140, 0.3)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -60,7 +60,7 @@ const Contact = () => {
             href="mailto:briadev@proton.me" 
             className="btn shadow-lg"
             style={{ 
-              background: 'linear-gradient(135deg, #ffbd39 0%, #ffd662 100%)',
+              background: 'linear-gradient(135deg, #FFEE8C 0%, #ffd662 100%)',
               border: 'none',
               borderRadius: '25px', 
               fontWeight: '700', 
@@ -78,11 +78,11 @@ const Contact = () => {
             }}
             onMouseOver={(e) => {
               e.currentTarget.style.transform = 'translateY(-3px)';
-              e.currentTarget.style.boxShadow = '0 12px 25px rgba(255, 189, 57, 0.4)';
+              e.currentTarget.style.boxShadow = '0 12px 25px rgba(255, 238, 140, 0.4)';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 8px 25px rgba(255, 189, 57, 0.3)';
+              e.currentTarget.style.boxShadow = '0 8px 25px rgba(255, 238, 140, 0.3)';
             }}
           >
             <span className="me-2" style={{ fontSize: '1.3rem' }}>✉️</span>
@@ -98,7 +98,7 @@ const Contact = () => {
         left: '10%',
         width: '2px',
         height: '60px',
-        background: 'linear-gradient(to bottom, #ffbd39, transparent)',
+        background: 'linear-gradient(to bottom, #FFEE8C, transparent)',
         opacity: '0.3'
       }}></div>
       <div style={{

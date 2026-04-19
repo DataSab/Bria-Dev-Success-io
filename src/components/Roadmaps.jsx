@@ -43,7 +43,7 @@ const ConseilCard = ({ conseil, index }) => {
       <div className="conseil-card p-4 shadow-lg w-100" style={{ 
         background: '#fff', 
         borderRadius: '35px', 
-        borderBottom: '8px solid #ffbd39',
+        borderBottom: '8px solid #FFEE8C',
         transition: 'all 0.3s ease',
         display: 'flex',
         flexDirection: 'column',
@@ -84,7 +84,7 @@ const Roadmaps = () => {
 
   const roadmapData = {
     dev: [
-      { id: 1, title: 'LES FONDAMENTAUX', description: 'HTML5, CSS3, JavaScript (ES6+), Git & GitHub, Logique, SQL.', advice: 'Conseil : Commencez par HTML/CSS', color: '#ffbd39' },
+      { id: 1, title: 'LES FONDAMENTAUX', description: 'HTML5, CSS3, JavaScript (ES6+), Git & GitHub, Logique, SQL.', advice: 'Conseil : Commencez par HTML/CSS', color: '#FFEE8C' },
       { id: 2, title: 'FRONTEND OU BACKEND', description: 'React/Vue/Angular, Node.js, Python (Django), API REST, Auth.', advice: 'Conseil : Choisissez selon vos préférences visuel vs logique', color: '#4CAF50' },
       { id: 3, title: 'PROJETS PORTFOLIO', description: '3-5 projets GitHub, Site portfolio, App CRUD, Open source.', advice: 'Conseil : Qualité > Quantité', color: '#2196F3' },
       { id: 4, title: 'RECHERCHE D\'EMPLOI', description: 'LinkedIn, Candidatures ciblées, Entretiens techniques, Réseau.', advice: 'Conseil : Les stages sont d\'excellents tremplins', color: '#9C27B0' },
@@ -144,7 +144,7 @@ const Roadmaps = () => {
                 { id: 'devops', label: 'Cloud / DevOps' }
               ].map((tab) => {
                 const colors = {
-                  dev: '#ffbd39',
+                  dev: '#FFEE8C',
                   cyber: '#00ced1',
                   ia: '#f39c12',
                   devops: '#f59e0b'

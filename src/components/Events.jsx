@@ -250,9 +250,9 @@ const Events = () => {
                 style={{
                   padding: '10px 24px',
                   borderRadius: '30px',
-                  border: filter === cat ? 'none' : '2px solid #ffbd39',
-                  background: filter === cat ? '#ffbd39' : 'rgba(255, 189, 57, 0.1)',
-                  color: filter === cat ? '#000' : '#ffbd39',
+                  border: filter === cat ? 'none' : '2px solid #FFEE8C',
+                  background: filter === cat ? '#FFEE8C' : 'rgba(255, 238, 140, 0.1)',
+                  color: filter === cat ? '#000' : '#FFEE8C',
                   fontWeight: '700',
                   cursor: 'pointer',
                   transition: 'all 0.3s ease',
@@ -262,12 +262,12 @@ const Events = () => {
                 }}
                 onMouseOver={(e) => {
                   if (filter !== cat) {
-                    e.currentTarget.style.background = 'rgba(255, 189, 57, 0.2)';
+                    e.currentTarget.style.background = 'rgba(255, 238, 140, 0.2)';
                   }
                 }}
                 onMouseOut={(e) => {
                   if (filter !== cat) {
-                    e.currentTarget.style.background = 'rgba(255, 189, 57, 0.1)';
+                    e.currentTarget.style.background = 'rgba(255, 238, 140, 0.1)';
                   }
                 }}
               >
@@ -312,7 +312,7 @@ const Events = () => {
                   onMouseOver={(e) => {
                     e.currentTarget.style.transform = 'translateY(-8px)';
                     e.currentTarget.style.boxShadow = '0 20px 40px rgba(255,189,57,0.3)';
-                    e.currentTarget.style.borderColor = '#ffbd39';
+                    e.currentTarget.style.borderColor = '#FFEE8C';
                   }}
                   onMouseOut={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)';
@@ -327,7 +327,7 @@ const Events = () => {
                   <span style={{
                     fontSize: '0.75rem',
                     fontWeight: '700',
-                    color: '#ffbd39',
+                    color: '#FFEE8C',
                     background: 'rgba(255,189,57,0.12)',
                     padding: '3px 10px',
                     borderRadius: '20px',
@@ -373,7 +373,7 @@ const Events = () => {
                 borderRadius: '20px',
                 padding: '30px',
                 boxShadow: '0 10px 40px rgba(0,0,0,0.3)',
-                border: '1px solid rgba(255, 189, 57, 0.3)',
+                border: '1px solid rgba(255, 238, 140, 0.3)',
                 transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
                 cursor: 'pointer',
                 position: 'relative',
@@ -382,13 +382,13 @@ const Events = () => {
               }}
               onMouseOver={(e) => {
                 e.currentTarget.style.transform = 'translateY(-10px) scale(1.02)';
-                e.currentTarget.style.boxShadow = '0 25px 50px rgba(255, 189, 57, 0.3)';
-                e.currentTarget.style.borderColor = '#ffbd39';
+                e.currentTarget.style.boxShadow = '0 25px 50px rgba(255, 238, 140, 0.3)';
+                e.currentTarget.style.borderColor = '#FFEE8C';
               }}
               onMouseOut={(e) => {
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
                 e.currentTarget.style.boxShadow = '0 10px 40px rgba(0,0,0,0.3)';
-                e.currentTarget.style.borderColor = 'rgba(255, 189, 57, 0.3)';
+                e.currentTarget.style.borderColor = 'rgba(255, 238, 140, 0.3)';
               }}
             >
               {/* Icon Badge */}
@@ -406,10 +406,10 @@ const Events = () => {
                 <span style={{
                   fontSize: '0.85rem',
                   fontWeight: '800',
-                  color: '#ffbd39',
+                  color: '#FFEE8C',
                   textTransform: 'uppercase',
                   letterSpacing: '1px',
-                  background: 'rgba(255, 189, 57, 0.15)',
+                  background: 'rgba(255, 238, 140, 0.15)',
                   padding: '5px 12px',
                   borderRadius: '20px',
                   display: 'inline-block'
@@ -487,7 +487,7 @@ const Events = () => {
                   letterSpacing: '1px'
                 }}
                 onMouseOver={(e) => {
-                  e.currentTarget.style.background = '#ffbd39';
+                  e.currentTarget.style.background = '#FFEE8C';
                   e.currentTarget.style.color = '#000';
                   e.currentTarget.style.transform = 'scale(1.05)';
                 }}
@@ -509,12 +509,12 @@ const Events = () => {
           textAlign: 'center',
           marginTop: '60px',
           padding: '40px',
-          background: 'rgba(255, 189, 57, 0.1)',
+          background: 'rgba(255, 238, 140, 0.1)',
           borderRadius: '20px',
-          border: '2px solid rgba(255, 189, 57, 0.3)'
+          border: '2px solid rgba(255, 238, 140, 0.3)'
         }}>
           <h3 style={{
-            color: '#ffbd39',
+            color: '#FFEE8C',
             fontSize: '1.5rem',
             fontWeight: '800',
             marginBottom: '15px',
@@ -535,7 +535,7 @@ const Events = () => {
           <a
             href="#contact-section"
             style={{
-              background: '#ffbd39',
+              background: '#FFEE8C',
               color: '#000',
               textDecoration: 'none',
               fontWeight: '700',
@@ -546,15 +546,15 @@ const Events = () => {
               transition: 'all 0.3s ease',
               textTransform: 'uppercase',
               letterSpacing: '1px',
-              boxShadow: '0 5px 20px rgba(255, 189, 57, 0.4)'
+              boxShadow: '0 5px 20px rgba(255, 238, 140, 0.4)'
             }}
             onMouseOver={(e) => {
               e.currentTarget.style.transform = 'translateY(-3px)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(255, 189, 57, 0.5)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(255, 238, 140, 0.5)';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 5px 20px rgba(255, 189, 57, 0.4)';
+              e.currentTarget.style.boxShadow = '0 5px 20px rgba(255, 238, 140, 0.4)';
             }}
           >
             Me contacter

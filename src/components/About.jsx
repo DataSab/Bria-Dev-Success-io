@@ -41,7 +41,7 @@ const About = () => {
             }}>
               {t('about.title')}
             </h2>
-            <div style={{ width: '50px', height: '4px', background: '#ffbd39', margin: '0 auto' }}></div>
+            <div style={{ width: '50px', height: '4px', background: '#FFEE8C', margin: '0 auto' }}></div>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ const About = () => {
                 style={{
                   maxWidth: isMobile ? '200px' : '280px', // Utilise l'état isMobile
                   height: 'auto',
-                  border: '3px solid #ffbd39',
+                  border: '3px solid #FFEE8C',
                   padding: '12px',
                   background: '#fff',
                   borderRadius: '20px'
@@ -87,7 +87,7 @@ const About = () => {
                 background: '#f8f9fa',
                 padding: '20px',
                 borderRadius: '15px',
-                borderLeft: '5px solid #ffbd39',
+                borderLeft: '5px solid #FFEE8C',
                 textAlign: 'left'
               }}>
                 <h4 style={{ fontWeight: '800', marginBottom: '12px', fontSize: '1rem', color: '#000' }}>
@@ -102,7 +102,7 @@ const About = () => {
                       fontSize: '0.9rem',
                       color: '#444'
                     }}>
-                      <span aria-hidden="true" style={{ color: '#ffbd39', marginRight: '10px', fontWeight: '900', marginTop: '2px' }}>✓</span>
+                      <span aria-hidden="true" style={{ color: '#FFEE8C', marginRight: '10px', fontWeight: '900', marginTop: '2px' }}>✓</span>
                       {t(`about.goal.${num}`)}
                     </li>
                   ))}
