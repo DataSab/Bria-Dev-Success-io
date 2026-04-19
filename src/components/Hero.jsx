@@ -128,11 +128,17 @@ const Hero = () => {
         </h1>
 
         <p className="lead text-white" style={{
-          fontSize: 'clamp(1rem, 2.8vw, 1.3rem)',
+          fontSize: 'clamp(1.1rem, 3vw, 1.5rem)', /* Agrandi */
           lineHeight: '1.6',
-          opacity: 0.9,
-          maxWidth: '640px',
+          opacity: 1,
+          maxWidth: '750px',
           margin: '0 auto 1.6rem',
+          padding: '1.2rem 2rem',
+          background: 'rgba(0, 0, 0, 0.45)', /* Fond discret */
+          borderRadius: '15px',
+          backdropFilter: 'blur(8px)',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          fontWeight: '500',
         }}>
           {t('hero.welcome')}
         </p>
