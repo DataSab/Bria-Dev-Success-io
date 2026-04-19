@@ -133,6 +133,37 @@
     visibility: visible;
   }
 
+  .mobile-menu-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .mobile-bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+
+  .mobile-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(160deg, rgba(1,22,30,0.9) 0%, rgba(1,42,74,0.85) 40%, rgba(0,105,148,0.75) 70%, rgba(1,22,30,0.9) 100%);
+  }
+
   .navbar-nav {
     flex-direction: column;
     width: 100%;
@@ -155,7 +186,8 @@
     border: 2px solid #FFA500 !important;
     border-radius: 15px !important;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8) !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(5px);
     display: block;
     z-index: 1080;
     position: relative;

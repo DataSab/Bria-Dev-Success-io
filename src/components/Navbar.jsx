@@ -93,6 +93,20 @@ const Navbar = () => {
           id="ftco-nav"
           style={{ justifyContent: 'center', width: '100%' }}
         >
+          {/* Background Video for Mobile Menu */}
+          <div className="mobile-menu-bg">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="mobile-bg-video"
+            >
+              <source src="/hero-video.mp4" type="video/mp4" />
+            </video>
+            <div className="mobile-bg-overlay"></div>
+          </div>
+
           <ul className="navbar-nav" style={{ margin: '0 auto' }}>
             {navLinks.map((link, index) => (
               <li key={index} className="nav-item">
