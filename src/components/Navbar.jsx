@@ -71,9 +71,8 @@ const Navbar = () => {
     <nav
       className={`navbar navbar-expand-lg site-navbar-target ${isScrolled ? 'navbar-scrolled' : ''}`}
       id="ftco-navbar"
-      style={{ background: '#000000' }}
     >
-      <div className="container-navbar" style={{ justifyContent: 'center' }}>
+      <div className="container-navbar">
         <button
           className={`navbar-toggler ${isMobileMenuOpen ? 'active' : ''}`}
           type="button"
@@ -91,7 +90,6 @@ const Navbar = () => {
         <div
           className={`collapse navbar-collapse ${isMobileMenuOpen ? 'show' : ''}`}
           id="ftco-nav"
-          style={{ justifyContent: 'center', width: '100%' }}
         >
           {/* Background Video for Mobile Menu */}
           <div className="mobile-menu-bg">

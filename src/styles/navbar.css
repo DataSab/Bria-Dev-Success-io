@@ -40,12 +40,17 @@
 }
 
 /* Desktop Links */
+.mobile-menu-bg {
+  display: none;
+}
+
 .navbar-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 12px;
-  margin: 0;
+  justify-content: center;
+  gap: 15px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -133,7 +138,8 @@
     visibility: visible;
   }
 
-  .mobile-menu-bg {
+  .navbar-collapse.show .mobile-menu-bg {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
