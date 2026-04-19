@@ -18,7 +18,7 @@ const CategoryBox = ({ cat, index }) => {
         height: '100%',
         transition: 'all 0.3s ease'
       }}>
-        <h3 className="h5 font-weight-bold mb-4" style={{ color: '#FFEE8C' }}>{cat.title}</h3>
+        <h3 className="h5 font-weight-bold mb-4" style={{ color: '#FFA500' }}>{cat.title}</h3>
         <div className="d-flex flex-wrap" style={{ gap: '12px' }}>
           {cat.skills.map((skill, i) => (
             <a 
@@ -41,7 +41,7 @@ const CategoryBox = ({ cat, index }) => {
                 cursor: 'pointer'
               }}
               onMouseOver={(e) => {
-                e.currentTarget.style.background = '#FFEE8C';
+                e.currentTarget.style.background = '#FFA500';
                 e.currentTarget.style.color = '#000';
                 e.currentTarget.style.transform = 'scale(1.1)';
               }}
@@ -124,7 +124,7 @@ const TechStack = () => {
       <div className="container">
         <div className="row justify-content-center pb-5">
           <div className="col-md-12 heading-section text-center">
-            <h2 className="mb-4" style={{ color: '#FFEE8C', fontWeight: '800', letterSpacing: '2px' }}>TECHNOLOGIES & OUTILS</h2>
+            <h2 className="mb-4" style={{ color: '#FFA500', fontWeight: '800', letterSpacing: '2px' }}>TECHNOLOGIES & OUTILS</h2>
             
             {/* dynamic tabs */}
             <div className="d-flex justify-content-center flex-wrap gap-2 mb-5">
@@ -133,9 +133,9 @@ const TechStack = () => {
                   key={tab}
                   onClick={() => setActiveTab(tab)}
                   style={{
-                    background: activeTab === tab ? '#FFEE8C' : 'transparent',
-                    color: activeTab === tab ? '#000' : '#FFEE8C',
-                    border: '2px solid #FFEE8C',
+                    background: activeTab === tab ? '#FFA500' : 'transparent',
+                    color: activeTab === tab ? '#000' : '#FFA500',
+                    border: '2px solid #FFA500',
                     padding: '8px 20px',
                     borderRadius: '25px',
                     fontWeight: '700',

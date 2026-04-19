@@ -26,7 +26,7 @@ const ToolsDetail = () => {
               padding: '15px',
               background: '#f8f9fa',
               borderRadius: '12px',
-              borderLeft: '4px solid #FFEE8C',
+              borderLeft: '4px solid #FFA500',
               transition: 'all 0.3s ease',
               cursor: 'pointer'
             }}

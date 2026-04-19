@@ -42,7 +42,7 @@ const OrientationDetail = () => {
             }}
             onMouseOver={(e) => {
               e.currentTarget.style.background = '#fff';
-              e.currentTarget.style.borderColor = '#FFEE8C';
+              e.currentTarget.style.borderColor = '#FFA500';
               e.currentTarget.style.transform = 'translateY(-3px)';
             }}
             onMouseOut={(e) => {

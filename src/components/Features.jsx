@@ -22,7 +22,7 @@ const FeatureCard = ({ feat, idx }) => {
           background: '#f8f9fa',
           padding: window.innerWidth < 768 ? '20px' : '30px',
           borderRadius: '20px',
-          borderBottom: '5px solid #FFEE8C',
+          borderBottom: '5px solid #FFA500',
           height: '100%',
           textAlign: 'center',
           transition: 'all 0.3s ease',
@@ -32,7 +32,7 @@ const FeatureCard = ({ feat, idx }) => {
         onMouseOver={(e) => {
           e.currentTarget.style.transform = 'translateY(-10px)';
           e.currentTarget.style.background = '#fff';
-          e.currentTarget.style.boxShadow = '0 15px 40px rgba(255, 238, 140, 0.15)';
+          e.currentTarget.style.boxShadow = '0 15px 40px rgba(255, 165, 0, 0.15)';
         }}
         onMouseOut={(e) => {
           e.currentTarget.style.transform = 'translateY(0)';
@@ -59,7 +59,7 @@ const FeatureCard = ({ feat, idx }) => {
         </p>
         <div style={{ 
           marginTop: '15px', 
-          color: '#FFEE8C', 
+          color: '#FFA500', 
           fontSize: '0.8rem', 
           fontWeight: '700',
           textTransform: 'uppercase'
@@ -179,7 +179,7 @@ const Features = () => {
               <button 
                 onClick={() => setActiveFeature(null)}
                 style={{
-                  background: '#FFEE8C',
+                  background: '#FFA500',
                   color: '#000',
                   border: 'none',
                   padding: '12px 30px',
@@ -188,7 +188,7 @@ const Features = () => {
                   cursor: 'pointer',
                   fontSize: '0.9rem',
                   textTransform: 'uppercase',
-                  boxShadow: '0 5px 15px rgba(255, 238, 140, 0.3)'
+                  boxShadow: '0 5px 15px rgba(255, 165, 0, 0.3)'
                 }}
               >
                 {t('features.close')}

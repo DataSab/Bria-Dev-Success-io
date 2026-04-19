@@ -32,7 +32,7 @@ const PracticeDetail = () => {
               onMouseOut={(e) => e.currentTarget.style.background = 'transparent'}
             >
               <span style={{ 
-                background: '#FFEE8C', 
+                background: '#FFA500', 
                 color: '#000', 
                 padding: '2px 8px', 
                 borderRadius: '5px', 

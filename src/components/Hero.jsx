@@ -104,7 +104,7 @@ const Hero = () => {
         />
 
         <span className="subheading" style={{
-          color: '#FFEE8C',
+          color: '#FFA500',
           fontSize: 'clamp(1.6rem, 4.5vw, 3rem)',
           fontWeight: '800',
           letterSpacing: '3px',
@@ -185,9 +185,9 @@ const Hero = () => {
             fontWeight: '700',
             padding: '12px 28px',
             fontSize: '0.8rem',
-            background: '#FFEE8C',
+            background: '#FFA500',
             color: '#000',
-            border: '2px solid #FFEE8C',
+            border: '2px solid #FFA500',
             transition: 'all 0.3s ease',
             textDecoration: 'none',
             textTransform: 'uppercase',

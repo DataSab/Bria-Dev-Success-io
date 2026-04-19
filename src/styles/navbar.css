@@ -11,7 +11,7 @@
   background: rgba(0, 0, 0, 0.85) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 238, 140, 0.2);
+  border-bottom: 1px solid rgba(255, 165, 0, 0.2);
   transition: all 0.4s ease;
   height: auto;
   display: flex;
@@ -22,7 +22,7 @@
   padding: 8px 0;
   background: #000000 !important;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
-  border-bottom: 2px solid #FFEE8C;
+  border-bottom: 2px solid #FFA500;
 }
 
 .container-navbar {
@@ -54,7 +54,7 @@
   font-size: 0.95rem !important;
   font-weight: 700 !important;
   padding: 10px 18px !important;
-  color: #FFEE8C !important;
+  color: #FFA500 !important;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease !important;
@@ -64,14 +64,14 @@
 
 .nav-link:hover {
   color: #000 !important;
-  background-color: #FFEE8C !important;
+  background-color: #FFA500 !important;
 }
 
 /* Mobile Toggler - ENHANCED SIZE */
 .navbar-toggler {
   display: none;
-  background: rgba(255, 238, 140, 0.9) !important;
-  border: 2px solid #FFEE8C !important;
+  background: rgba(255, 165, 0, 0.9) !important;
+  border: 2px solid #FFA500 !important;
   padding: 12px 24px !important; /* Large hit area */
   border-radius: 12px !important;
   cursor: pointer;
@@ -79,7 +79,7 @@
   gap: 12px;
   z-index: 1100;
   transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(255, 238, 140, 0.5);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
 }
 
 .toggler-icons-group {
@@ -152,7 +152,7 @@
     font-size: 1rem !important;
     padding: 14px !important;
     text-align: center;
-    border: 2px solid #FFEE8C !important;
+    border: 2px solid #FFA500 !important;
     border-radius: 15px !important;
     width: 100%;
     background: rgba(0, 0, 0, 0.8) !important;
