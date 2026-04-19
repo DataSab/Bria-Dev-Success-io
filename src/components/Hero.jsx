@@ -132,38 +132,35 @@ const Hero = () => {
           lineHeight: '1.7',
           opacity: 1,
           maxWidth: '800px',
-          margin: '0 auto 2rem',
-          padding: '1.5rem 2.5rem',
-          /* Trame de points légère + dégradé bleu lagon très transparent */
-          backgroundImage: `
-            radial-gradient(circle, rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(135deg, rgba(0, 105, 148, 0.15) 0%, rgba(1, 42, 74, 0.25) 100%)
-          `,
-          backgroundSize: '20px 20px, 100% 100%',
+          margin: '0 auto 1.5rem',
+          padding: '1.5rem 2rem',
+          /* Bleu foncé profond et élégant */
+          background: 'rgba(1, 22, 30, 0.85)',
           borderRadius: '20px',
-          backdropFilter: 'blur(12px)',
+          backdropFilter: 'blur(10px)',
           border: '1px solid rgba(0, 212, 255, 0.2)',
-          boxShadow: '0 20px 50px rgba(0, 0, 0, 0.4)',
+          boxShadow: '0 15px 35px rgba(0, 0, 0, 0.5)',
           fontWeight: '500',
-          position: 'relative',
         }}>
           {t('hero.welcome')}
         </p>
 
         <blockquote style={{
-          fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
+          fontSize: 'clamp(0.85rem, 2.5vw, 1.05rem)',
           fontStyle: 'italic',
           color: '#fff',
           lineHeight: '1.7',
           borderLeft: 'none',
-          maxWidth: '640px',
-          margin: '0 auto 2rem',
-          padding: '1rem 1.5rem',
-          background: 'rgba(0, 165, 255, 0.2)', /* Bleu plus marqué */
-          borderRadius: '12px',
-          backdropFilter: 'blur(4px)',
-          borderTop: '1px solid rgba(0, 212, 255, 0.3)',
-          borderBottom: '1px solid rgba(0, 212, 255, 0.3)',
+          maxWidth: '700px',
+          margin: '0 auto 2.5rem',
+          padding: '1.2rem 2rem',
+          /* Même bleu foncé élégant pour l'harmonie */
+          background: 'rgba(1, 22, 30, 0.75)',
+          borderRadius: '15px',
+          backdropFilter: 'blur(10px)',
+          borderTop: '1px solid rgba(0, 212, 255, 0.25)',
+          borderBottom: '1px solid rgba(0, 212, 255, 0.25)',
+          boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
         }}>
           {t('hero.quote')}
         </blockquote>
