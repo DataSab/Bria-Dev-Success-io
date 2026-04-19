@@ -69,11 +69,11 @@ const Hero = () => {
         <source src="/hero-video.mp4" type="video/mp4" />
       </video>
 
-      {/* ── Overlay bleu lagon ── */}
+      {/* ── Overlay bleu profond ── */}
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: 'linear-gradient(160deg, rgba(1,22,30,0.82) 0%, rgba(1,42,74,0.75) 40%, rgba(0,105,148,0.65) 70%, rgba(1,22,30,0.85) 100%)',
+        background: 'linear-gradient(160deg, rgba(1,22,30,0.92) 0%, rgba(1,42,74,0.85) 40%, rgba(0,105,148,0.70) 70%, rgba(1,22,30,0.95) 100%)',
         zIndex: 1,
       }} />
 
@@ -104,13 +104,13 @@ const Hero = () => {
         />
 
         <span className="subheading" style={{
-          color: '#00d4ff', /* Bleu cyan vif pour le contraste avec l'orange */
+          color: '#FFA500', /* Retour à l'orange pour la visibilité */
           fontSize: 'clamp(1.6rem, 4.5vw, 3rem)',
           fontWeight: '800',
           letterSpacing: '3px',
           display: 'block',
           marginBottom: '1rem',
-          textShadow: '0 0 20px rgba(0,212,255,0.4)',
+          textShadow: '0 0 20px rgba(0,0,0,0.8)',
           textTransform: 'uppercase',
         }}>
           {t('hero.subtitle')}
