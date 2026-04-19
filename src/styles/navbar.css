@@ -72,40 +72,40 @@
   background-color: #FFA500 !important;
 }
 
-/* Mobile Toggler - ENHANCED SIZE */
+/* Mobile Toggler - COMPACT SIZE */
 .navbar-toggler {
   display: none;
   background: rgba(255, 165, 0, 0.9) !important;
   border: 2px solid #FFA500 !important;
-  padding: 12px 24px !important; /* Large hit area */
-  border-radius: 12px !important;
+  padding: 8px 16px !important; /* Réduit de 12px 24px */
+  border-radius: 8px !important;
   cursor: pointer;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   z-index: 1100;
   transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
 }
 
 .toggler-icons-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .toggler-icon {
-  width: 25px; /* Larger icon lines */
-  height: 3px;
+  width: 20px; /* Réduit de 25px */
+  height: 2px; /* Réduit de 3px */
   background: #000000;
-  border-radius: 3px;
+  border-radius: 2px;
   transition: all 0.3s ease;
 }
 
 .toggler-text {
   color: #000000;
-  font-size: 18px !important; /* Larger text */
-  font-weight: 900 !important;
-  letter-spacing: 2px;
+  font-size: 14px !important; /* Réduit de 18px */
+  font-weight: 800 !important;
+  letter-spacing: 1px;
 }
 
 /* Mobile Fullscreen Menu */
@@ -201,13 +201,13 @@
 
   /* Toggler animation when open */
   .navbar-toggler.active .toggler-icon:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+    transform: rotate(45deg) translate(4px, 4px);
   }
   .navbar-toggler.active .toggler-icon:nth-child(2) {
     opacity: 0;
   }
   .navbar-toggler.active .toggler-icon:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }
 
