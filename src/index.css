@@ -6,7 +6,7 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 70px; /* Compensation pour la navbar sticky */
+	scroll-padding-top: 70px; 
 }
 
 body {
@@ -20,7 +20,7 @@ body {
 	width: 100%;
 }
 
-/* On ne centre que les titres et les paragraphes de contenu par défaut, pas tout le body */
+/* Default size*/
 section h1, section h2, section h3, section h4, section p {
     text-align: center;
 }
@@ -39,7 +39,7 @@ section h1, section h2, section h3, section h4, section p {
 	justify-content: center !important;
 }
 
-/* Typography globale - tailles cohérentes */
+/* Globale Typo */
 h1, .h1 {
 	font-size: 1.6rem !important;
 	font-weight: 600;
@@ -65,7 +65,7 @@ p {
 }
 
 .big, .big-2 {
-	display: none !important; /* Cache les gros titres de fond */
+	display: none !important;
 }
 
 /* Bandeau Cyber Défilant */
@@ -75,7 +75,7 @@ p {
     left: 0;
     width: 100%;
     height: 28px;
-    background: #ffbd39;
+    background: #FFEE8C;
     z-index: 2000;
     display: flex;
     align-items: center;
@@ -123,7 +123,7 @@ p {
     }
 }
 
-/* Effet de pulsation (clignotement doux) pour le ticker */
+/* Pulse effect */
 @keyframes pulse-text {
     0% { opacity: 1; }
     50% { opacity: 0.7; }
@@ -144,7 +144,7 @@ p {
 .hero-main-title {
 	font-size: 2.5rem;
 	font-weight: 800;
-	background: linear-gradient(90deg, #ffffff, #fff9e6, #ffbd39, #fff9e6, #ffffff);
+	background: linear-gradient(90deg, #ffffff, #fff9e6, #FFEE8C , #fff9e6, #ffffff);
 	background-size: 200% 100%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -169,7 +169,7 @@ p {
 }
 
 .lang-switcher {
-	background: #ffbd39 !important;
+	background: #ffb3939 !important;
 	color: #000 !important;
 	padding: 10px 25px !important;
 	border-radius: 25px !important;
@@ -185,7 +185,7 @@ p {
 	font-size: 1.2rem !important; /* Réduit de 1.4rem */
 	font-weight: 600;
 	margin-bottom: 0.6rem;
-	background: linear-gradient(45deg, #fff, #ffbd39);
+	background: linear-gradient(45deg, #fff, #FFEE8C);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -218,8 +218,8 @@ p {
 	display: inline-block;
 	padding: 6px 16px;
 	margin: 6px;
-	border: 1px solid #ffbd39;
-	color: #ffbd39;
+	border: 1px solid #FFEE8C;
+	color: #FFEE8C;
 	text-decoration: none;
 	border-radius: 18px;
 	font-weight: 400;
@@ -230,14 +230,14 @@ p {
 }
 
 .btn-modern:hover {
-	background: #ffbd39;
+	background: #FFEE8C;
 	color: #000;
 	transform: translateY(-3px);
 	box-shadow: 0 10px 20px rgba(255, 189, 57, 0.3);
 }
 
 .btn-filled {
-	background: #ffbd39;
+	background: #FFEE8C;
 	color: #000;
 }
 
@@ -406,7 +406,7 @@ p {
 	transform: translateX(-50%);
 	width: 50px; /* Réduit */
 	height: 3px; /* Réduit */
-	background: #ffbd39;
+	background: #FFEE8C;
 	border-radius: 2px;
 }
 
@@ -449,7 +449,7 @@ p {
 	margin: 0 auto 1.5rem auto;
 	display: block;
 	object-fit: cover;
-	border: 5px solid #ffbd39;
+	border: 5px solid #FFEE8C;
 	box-shadow: 0 10px 30px rgba(255, 189, 57, 0.2);
 }
 
@@ -569,7 +569,7 @@ p {
 
 .skill-icon {
 	font-size: 1.5rem; /* Réduit de 1.8rem */
-	color: #ffbd39;
+	color: #FFEE8C;
 	margin-bottom: 0.6rem;
 }
 
@@ -605,15 +605,15 @@ p {
 }
 
 .social-link:hover {
-	background: #ffbd39;
+	background: #FFEE8C;
 	color: #000;
 	transform: translateY(-3px);
 }
 
 /* Sélecteur de langue simple */
 .lang-switcher {
-	background: #ffbd39 !important;
-	border: 2px solid #ffbd39 !important;
+	background: #FFEE8C !important;
+	border: 2px solid #FFEE8C !important;
 	color: #000 !important;
 	padding: 0.4rem 0.8rem !important;
 	border-radius: 20px !important;
@@ -675,7 +675,7 @@ p {
 	top: calc(100% + 0.8rem);
 	right: 0;
 	background: rgba(0, 0, 0, 0.95);
-	border: 2px solid #ffbd39;
+	border: 2px solid #FFEE8C;
 	border-radius: 15px;
 	padding: 0.5rem 0;
 	list-style: none;
@@ -719,7 +719,7 @@ p {
 
 .lang-option:hover {
 	background: rgba(255, 189, 57, 0.2);
-	color: #ffbd39;
+	color: #FFEE8C;
 	padding-left: 1.3rem;
 }
 
@@ -971,7 +971,7 @@ p {
 }
 
 .project-title a:hover {
-    color: #ffbd39;
+    color: #FFEE8C;
 }
 
 .project-desc {
@@ -1074,12 +1074,12 @@ p {
     width: 45px;
     height: 45px;
     background: rgba(255, 189, 57, 0.1);
-    border: 2px solid #ffbd39;
+    border: 2px solid #FFEE8C;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffbd39;
+    color: #FFEE8C;
     font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1088,7 +1088,7 @@ p {
 }
 
 .skip-splash-btn:hover {
-    background: #ffbd39;
+    background: #FFEE8C;
     color: #000;
     transform: rotate(90deg) scale(1.1);
     box-shadow: 0 0 20px rgba(255, 189, 57, 0.6);
