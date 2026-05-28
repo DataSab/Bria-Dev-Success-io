@@ -394,25 +394,27 @@ const Events = () => {
               {/* Icon Badge */}
               <div style={{
                 position: 'absolute',
-                top: '20px',
-                right: '20px',
-                fontSize: '2rem'
+                top: '15px',
+                right: '15px',
+                fontSize: '1.5rem',
+                zIndex: 2
               }}>
                 {event.icon}
               </div>
 
               {/* Date */}
-              <div style={{ marginBottom: '15px' }}>
+              <div style={{ marginBottom: '12px', paddingRight: '45px' }}>
                 <span style={{
-                  fontSize: '0.85rem',
+                  fontSize: '0.7rem',
                   fontWeight: '800',
                   color: '#FFA500',
                   textTransform: 'uppercase',
-                  letterSpacing: '1px',
+                  letterSpacing: '0.5px',
                   background: 'rgba(255, 165, 0, 0.15)',
-                  padding: '5px 12px',
+                  padding: '4px 10px',
                   borderRadius: '20px',
-                  display: 'inline-block'
+                  display: 'inline-block',
+                  lineHeight: '1.2'
                 }}>
                   {event.date}
                   {event.endDate && ` - ${event.endDate}`}
