@@ -84,33 +84,33 @@ const Hero = () => {
       <div className="container" style={{
         position: 'relative',
         zIndex: 3,
-        maxWidth: '860px',
+        maxWidth: '800px',
         textAlign: 'center',
-        padding: '120px 20px 60px',
+        padding: '80px 20px 40px', 
       }}>
 
         <img
           src="/images/logo-briadev.png"
           alt="Bria Dev Success Logo"
           style={{
-            height: 'clamp(60px, 10vw, 90px)',
+            height: 'clamp(40px, 7vw, 60px)', 
             width: 'auto',
-            marginBottom: '1rem',
+            marginBottom: '0.8rem',
             display: 'block',
             marginLeft: 'auto',
             marginRight: 'auto',
-            filter: 'drop-shadow(0 0 18px rgba(0,105,148,0.6))',
+            filter: 'drop-shadow(0 0 15px rgba(0,105,148,0.5))',
           }}
         />
 
         <span className="subheading" style={{
           color: '#FFA500', 
-          fontSize: 'clamp(1rem, 2.5vw, 1.3rem)', 
+          fontSize: 'clamp(0.9rem, 1.8vw, 1.1rem)', 
           fontWeight: '600',
-          letterSpacing: '5px',
+          letterSpacing: '4px',
           display: 'block',
-          marginBottom: '1rem',
-          textShadow: '0 0 15px rgba(0,0,0,0.6)',
+          marginBottom: '0.6rem',
+          textShadow: '0 0 12px rgba(0,0,0,0.6)',
           textTransform: 'uppercase',
         }}>
           {t('hero.subtitle')}
@@ -118,49 +118,46 @@ const Hero = () => {
 
         <h1 style={{
           color: '#fff',
-          fontSize: 'clamp(1.6rem, 5vw, 3.2rem)',
+          fontSize: 'clamp(1.4rem, 3.5vw, 2.2rem)', 
           fontWeight: '900',
-          textShadow: '0 4px 30px rgba(0,0,0,0.9)',
-          lineHeight: '1.15',
-          marginBottom: '1.2rem',
+          textShadow: '0 4px 25px rgba(0,0,0,0.9)',
+          lineHeight: '1.1',
+          marginBottom: '1rem',
         }}>
           {text}
         </h1>
 
         <p className="lead text-white" style={{
-          fontSize: 'clamp(1rem, 2.5vw, 1.4rem)', 
-          lineHeight: '1.7',
+          fontSize: 'clamp(0.9rem, 1.8vw, 1.1rem)', 
+          lineHeight: '1.6',
           opacity: 1,
-          maxWidth: '800px',
-          margin: '0 auto 1.5rem',
-          padding: '1.5rem 2rem',
-          /* Bleu foncé profond et élégant */
+          maxWidth: '700px',
+          margin: '0 auto 1.2rem',
+          padding: '1rem 1.5rem', 
           background: 'rgba(1, 22, 30, 0.85)',
-          borderRadius: '20px',
+          borderRadius: '15px',
           backdropFilter: 'blur(10px)',
           border: '1px solid rgba(0, 212, 255, 0.2)',
-          boxShadow: '0 15px 35px rgba(0, 0, 0, 0.5)',
+          boxShadow: '0 10px 25px rgba(0, 0, 0, 0.4)',
           fontWeight: '500',
         }}>
           {t('hero.welcome')}
         </p>
 
         <blockquote style={{
-          fontSize: 'clamp(0.85rem, 2.5vw, 1.05rem)',
+          fontSize: 'clamp(0.75rem, 1.5vw, 0.9rem)', 
           fontStyle: 'italic',
-          color: '#fff',
-          lineHeight: '1.7',
+          color: 'rgba(255, 255, 255, 0.9)',
+          lineHeight: '1.5',
           borderLeft: 'none',
-          maxWidth: '700px',
-          margin: '0 auto 2.5rem',
-          padding: '1.2rem 2rem',
-          /* Même bleu foncé élégant pour l'harmonie */
-          background: 'rgba(1, 22, 30, 0.75)',
-          borderRadius: '15px',
+          maxWidth: '600px',
+          margin: '0 auto 1.8rem',
+          padding: '0.8rem 1.5rem', 
+          background: 'rgba(1, 22, 30, 0.65)',
+          borderRadius: '12px',
           backdropFilter: 'blur(10px)',
-          borderTop: '1px solid rgba(0, 212, 255, 0.25)',
-          borderBottom: '1px solid rgba(0, 212, 255, 0.25)',
-          boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+          borderTop: '1px solid rgba(0, 212, 255, 0.15)',
+          borderBottom: '1px solid rgba(0, 212, 255, 0.15)',
         }}>
           {t('hero.quote')}
         </blockquote>
@@ -174,8 +171,8 @@ const Hero = () => {
           <a href="#about-section" style={{
             borderRadius: '50px',
             fontWeight: '700',
-            padding: '12px 28px',
-            fontSize: '0.8rem',
+            padding: '10px 24px', 
+            fontSize: '0.75rem', 
             background: '#fff',
             color: '#000',
             border: '2px solid #fff',
@@ -193,8 +190,8 @@ const Hero = () => {
           <a href="#skills-section" style={{
             borderRadius: '50px',
             fontWeight: '700',
-            padding: '12px 28px',
-            fontSize: '0.8rem',
+            padding: '10px 24px',
+            fontSize: '0.75rem',
             background: '#FFA500',
             color: '#000',
             border: '2px solid #FFA500',
