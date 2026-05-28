@@ -104,13 +104,13 @@ const Hero = () => {
         />
 
         <span className="subheading" style={{
-          color: '#FFA500', /* Retour à l'orange pour la visibilité */
-          fontSize: 'clamp(1.6rem, 4.5vw, 3rem)',
-          fontWeight: '800',
-          letterSpacing: '3px',
+          color: '#FFA500', 
+          fontSize: 'clamp(1rem, 2.5vw, 1.3rem)', 
+          fontWeight: '600',
+          letterSpacing: '5px',
           display: 'block',
           marginBottom: '1rem',
-          textShadow: '0 0 20px rgba(0,0,0,0.8)',
+          textShadow: '0 0 15px rgba(0,0,0,0.6)',
           textTransform: 'uppercase',
         }}>
           {t('hero.subtitle')}
